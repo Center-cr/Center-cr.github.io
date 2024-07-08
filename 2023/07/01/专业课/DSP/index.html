@@ -1,9 +1,9 @@
-<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>DSP应用-总结 | Center-cr's Blog</title><meta name="author" content="Center-cr"><meta name="copyright" content="Center-cr"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="ffffff"><meta name="description" content="ppt重点   F&#x2F;TYOPORA_Note&#x2F;专业课&#x2F;DSP应用技术&#x2F;relative&#x2F;image-20230612140648947.png    F&#x2F;TYOPORA_Note&#x2F;专业课&#x2F;DSP应用技术&#x2F;relative&#x2F;image-20230612140743221.png    F&#x2F;TYOPORA_Note&#x2F;专业课&#x2F;DSP应用技术&#x2F;relative&#x2F;image-20230">
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>DSP应用-总结 | Center-cr's Blog</title><meta name="author" content="Center-cr"><meta name="copyright" content="Center-cr"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="ffffff"><meta name="description" content="ppt重点    如果是负数，就-0x10000,因为计算机中无符号数用原码表示，有符号数用补码表示  2 哈佛结构和冯诺伊曼结构是两种常见的计算机体系结构，它们的主要区别在于内存和处理器之间的交互方式。 1. 冯诺伊曼结构 在冯诺伊曼结构中，处理器和存储器使用同一个总线连接，也就是说，数据和指令共享同一个内存空间。当处理器需要执行一个指令时，它从内存中读取指令并进行解码。这种结构被广泛应用于大部">
 <meta property="og:type" content="article">
 <meta property="og:title" content="DSP应用-总结">
 <meta property="og:url" content="http://example.com/2023/07/01/%E4%B8%93%E4%B8%9A%E8%AF%BE/DSP/index.html">
 <meta property="og:site_name" content="Center-cr&#39;s Blog">
-<meta property="og:description" content="ppt重点   F&#x2F;TYOPORA_Note&#x2F;专业课&#x2F;DSP应用技术&#x2F;relative&#x2F;image-20230612140648947.png    F&#x2F;TYOPORA_Note&#x2F;专业课&#x2F;DSP应用技术&#x2F;relative&#x2F;image-20230612140743221.png    F&#x2F;TYOPORA_Note&#x2F;专业课&#x2F;DSP应用技术&#x2F;relative&#x2F;image-20230">
+<meta property="og:description" content="ppt重点    如果是负数，就-0x10000,因为计算机中无符号数用原码表示，有符号数用补码表示  2 哈佛结构和冯诺伊曼结构是两种常见的计算机体系结构，它们的主要区别在于内存和处理器之间的交互方式。 1. 冯诺伊曼结构 在冯诺伊曼结构中，处理器和存储器使用同一个总线连接，也就是说，数据和指令共享同一个内存空间。当处理器需要执行一个指令时，它从内存中读取指令并进行解码。这种结构被广泛应用于大部">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://raw.githubusercontent.com/Center-cr/picture/main/202307091559166.png">
 <meta property="article:published_time" content="2023-06-30T16:00:00.000Z">
@@ -181,957 +181,233 @@
       }
     }
     detectApple()
-    })(window)</script><meta name="generator" content="Hexo 6.3.0"></head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/icon.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">93</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">41</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">14</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于我</span></a></div><div class="menus_item"><a class="site-page" href="/tools_online/"><i class="fa-fw fas fa-cloud"></i><span> 在线工具</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://raw.githubusercontent.com/Center-cr/picture/main/202307091559166.png')"><nav id="nav"><span id="blog-info"><a href="/" title="Center-cr's Blog"><span class="site-name">Center-cr's Blog</span></a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search" href="javascript:void(0);"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于我</span></a></div><div class="menus_item"><a class="site-page" href="/tools_online/"><i class="fa-fw fas fa-cloud"></i><span> 在线工具</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">DSP应用-总结</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2023-06-30T16:00:00.000Z" title="发表于 2023-07-01 00:00:00">2023-07-01</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2023-06-30T16:00:00.000Z" title="更新于 2023-07-01 00:00:00">2023-07-01</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E4%B8%93%E4%B8%9A%E8%AF%BE/">专业课</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">3.4k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>12分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="DSP应用-总结"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h2 id="ppt重点">ppt重点</h2>
-<figure>
-<img
-src="https://raw.githubusercontent.com/Center-cr/picture/main/202307091550774.png"
-alt="F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230612140648947.png" />
-<figcaption
-aria-hidden="true">F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230612140648947.png</figcaption>
-</figure>
-<figure>
-<img
-src="https://raw.githubusercontent.com/Center-cr/picture/main/202307091550882.png"
-alt="F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230612140743221.png" />
-<figcaption
-aria-hidden="true">F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230612140743221.png</figcaption>
-</figure>
-<figure>
-<img
-src="https://raw.githubusercontent.com/Center-cr/picture/main/202307091550478.png"
-alt="F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230612140835736.png" />
-<figcaption
-aria-hidden="true">F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230612140835736.png</figcaption>
-</figure>
-<figure>
-<img
-src="https://raw.githubusercontent.com/Center-cr/picture/main/202307091550864.png"
-alt="F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230612151010938.png" />
-<figcaption
-aria-hidden="true">F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230612151010938.png</figcaption>
-</figure>
+    })(window)</script><meta name="generator" content="Hexo 6.3.0"></head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/icon.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">93</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">41</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">14</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于我</span></a></div><div class="menus_item"><a class="site-page" href="/tools_online/"><i class="fa-fw fas fa-cloud"></i><span> 在线工具</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://raw.githubusercontent.com/Center-cr/picture/main/202307091559166.png')"><nav id="nav"><span id="blog-info"><a href="/" title="Center-cr's Blog"><span class="site-name">Center-cr's Blog</span></a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search" href="javascript:void(0);"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于我</span></a></div><div class="menus_item"><a class="site-page" href="/tools_online/"><i class="fa-fw fas fa-cloud"></i><span> 在线工具</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">DSP应用-总结</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2023-06-30T16:00:00.000Z" title="发表于 2023-07-01 00:00:00">2023-07-01</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2023-06-30T16:00:00.000Z" title="更新于 2023-07-01 00:00:00">2023-07-01</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E4%B8%93%E4%B8%9A%E8%AF%BE/">专业课</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">2k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>5分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="DSP应用-总结"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h2 id="ppt重点"><a href="#ppt重点" class="headerlink" title="ppt重点"></a>ppt重点</h2><p><img src="https://raw.githubusercontent.com/Center-cr/picture/main/202307091550774.png" alt=" F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230612140648947.png"></p>
+<p><img src="https://raw.githubusercontent.com/Center-cr/picture/main/202307091550882.png" alt=" F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230612140743221.png"></p>
+<p><img src="https://raw.githubusercontent.com/Center-cr/picture/main/202307091550478.png" alt=" F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230612140835736.png"></p>
+<p><img src="https://raw.githubusercontent.com/Center-cr/picture/main/202307091550864.png" alt=" F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230612151010938.png"></p>
 <p>如果是负数，就-0x10000,因为计算机中无符号数用原码表示，有符号数用补码表示</p>
-<figure>
-<img
-src="https://raw.githubusercontent.com/Center-cr/picture/main/202307091551051.png"
-alt="F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230612151959846.png" />
-<figcaption
-aria-hidden="true">F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230612151959846.png</figcaption>
-</figure>
-<h3 id="section">2</h3>
-<figure>
-<img
-src="https://raw.githubusercontent.com/Center-cr/picture/main/202307091551125.png"
-alt="F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230612152031618.png" />
-<figcaption
-aria-hidden="true">F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230612152031618.png</figcaption>
-</figure>
-<p>哈佛结构和冯诺伊曼结构是两种常见的计算机体系结构，它们的主要区别在于内存和处理器之间的交互方式。
-1. 冯诺伊曼结构
-在冯诺伊曼结构中，处理器和存储器使用同一个总线连接，也就是说，数据和指令共享同一个内存空间。当处理器需要执行一个指令时，它从内存中读取指令并进行解码。这种结构被广泛应用于大部分的传统计算机中。
-2. 哈佛结构
-哈佛结构中，处理器和存储器分别使用独立的总线连接，也就是说，指令和数据存储在两个不同的内存空间中。由于指令和数据互相独立，处理器可以同时执行多个指令，这种结构被广泛应用于嵌入式系统和数字信号处理器等领域。</p>
+<p><img src="https://raw.githubusercontent.com/Center-cr/picture/main/202307091551051.png" alt=" F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230612151959846.png"></p>
+<h3 id="2"><a href="#2" class="headerlink" title="2"></a>2</h3><p><img src="https://raw.githubusercontent.com/Center-cr/picture/main/202307091551125.png" alt=" F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230612152031618.png"></p>
+<p>哈佛结构和冯诺伊曼结构是两种常见的计算机体系结构，它们的主要区别在于内存和处理器之间的交互方式。 1. 冯诺伊曼结构 在冯诺伊曼结构中，处理器和存储器使用同一个总线连接，也就是说，数据和指令共享同一个内存空间。当处理器需要执行一个指令时，它从内存中读取指令并进行解码。这种结构被广泛应用于大部分的传统计算机中。 2. 哈佛结构 哈佛结构中，处理器和存储器分别使用独立的总线连接，也就是说，指令和数据存储在两个不同的内存空间中。由于指令和数据互相独立，处理器可以同时执行多个指令，这种结构被广泛应用于嵌入式系统和数字信号处理器等领域。</p>
 <p>可以总结如下：</p>
 <table>
-<colgroup>
-<col style="width: 7%" />
-<col style="width: 54%" />
-<col style="width: 37%" />
-</colgroup>
 <thead>
-<tr class="header">
-<th style="text-align: center;">特点</th>
-<th style="text-align: center;">冯诺伊曼结构</th>
-<th style="text-align: center;">哈佛结构</th>
+<tr>
+<th align="center">特点</th>
+<th align="center">冯诺伊曼结构</th>
+<th align="center">哈佛结构</th>
 </tr>
 </thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: center;">内存结构</td>
-<td style="text-align: center;">存储器与处理器共享一个内存空间</td>
-<td style="text-align: center;">指令内存与数据内存独立</td>
+<tbody><tr>
+<td align="center">内存结构</td>
+<td align="center">存储器与处理器共享一个内存空间</td>
+<td align="center">指令内存与数据内存独立</td>
 </tr>
-<tr class="even">
-<td style="text-align: center;">处理速度</td>
-<td style="text-align: center;">数据和指令共享总线，处理速度较慢</td>
-<td style="text-align: center;">数据和指令独立，处理速度较快</td>
+<tr>
+<td align="center">处理速度</td>
+<td align="center">数据和指令共享总线，处理速度较慢</td>
+<td align="center">数据和指令独立，处理速度较快</td>
 </tr>
-<tr class="odd">
-<td style="text-align: center;">优缺点</td>
-<td
-style="text-align: center;">可以灵活地利用内存空间，但指令与数据交错访问有时会出现瓶颈</td>
-<td
-style="text-align: center;">可同时处理多个指令，但需要更多的内存空间</td>
+<tr>
+<td align="center">优缺点</td>
+<td align="center">可以灵活地利用内存空间，但指令与数据交错访问有时会出现瓶颈</td>
+<td align="center">可同时处理多个指令，但需要更多的内存空间</td>
 </tr>
-<tr class="even">
-<td style="text-align: center;">适用场景</td>
-<td style="text-align: center;">通用计算机</td>
-<td style="text-align: center;">嵌入式系统和数字信号处理器</td>
+<tr>
+<td align="center">适用场景</td>
+<td align="center">通用计算机</td>
+<td align="center">嵌入式系统和数字信号处理器</td>
 </tr>
-</tbody>
-</table>
-<p>总的来说，哈佛结构适合需要高效并行处理指令和数据的场景，而冯诺伊曼结构因其灵活的内存交互方式，更适合通用计算机等需要灵活使用内存的场景。</p>
-<figure>
-<img
-src="https://raw.githubusercontent.com/Center-cr/picture/main/202307091551411.png"
-alt="F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230612152917977.png" />
-<figcaption
-aria-hidden="true">F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230612152917977.png</figcaption>
-</figure>
-<figure>
-<img
-src="https://raw.githubusercontent.com/Center-cr/picture/main/202307091551395.png"
-alt="F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230612153115743.png" />
-<figcaption
-aria-hidden="true">F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230612153115743.png</figcaption>
-</figure>
-<figure>
-<img
-src="https://raw.githubusercontent.com/Center-cr/picture/main/202307091551447.png"
-alt="F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230612153425755.png" />
-<figcaption
-aria-hidden="true">F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230612153425755.png</figcaption>
-</figure>
-<figure>
-<img
-src="https://raw.githubusercontent.com/Center-cr/picture/main/202307091551593.png"
-alt="F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230612153504656.png" />
-<figcaption
-aria-hidden="true">F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230612153504656.png</figcaption>
-</figure>
-<figure>
-<img
-src="https://raw.githubusercontent.com/Center-cr/picture/main/202307091600630.png"
-alt="F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230612153542683.png" />
-<figcaption
-aria-hidden="true">F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230612153542683.png</figcaption>
-</figure>
-<figure>
-<img
-src="https://raw.githubusercontent.com/Center-cr/picture/main/202307091551248.png"
-alt="F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230612153724876.png" />
-<figcaption
-aria-hidden="true">F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230612153724876.png</figcaption>
-</figure>
-<figure>
-<img
-src="https://raw.githubusercontent.com/Center-cr/picture/main/202307091551393.png"
-alt="F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230612153749758.png" />
-<figcaption
-aria-hidden="true">F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230612153749758.png</figcaption>
-</figure>
-<figure>
-<img
-src="https://raw.githubusercontent.com/Center-cr/picture/main/202307091551646.png"
-alt="F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230612153809091.png" />
-<figcaption
-aria-hidden="true">F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230612153809091.png</figcaption>
-</figure>
-<figure>
-<img
-src="https://raw.githubusercontent.com/Center-cr/picture/main/202307091551379.png"
-alt="F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230612153826070.png" />
-<figcaption
-aria-hidden="true">F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230612153826070.png</figcaption>
-</figure>
-<figure>
-<img
-src="https://raw.githubusercontent.com/Center-cr/picture/main/202307091551749.png"
-alt="F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230612153848056.png" />
-<figcaption
-aria-hidden="true">F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230612153848056.png</figcaption>
-</figure>
-<figure>
-<img
-src="https://raw.githubusercontent.com/Center-cr/picture/main/202307091552481.png"
-alt="F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230612153904305.png" />
-<figcaption
-aria-hidden="true">F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230612153904305.png</figcaption>
-</figure>
-<figure>
-<img
-src="https://raw.githubusercontent.com/Center-cr/picture/main/202307091552348.png"
-alt="F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230612153918723.png" />
-<figcaption
-aria-hidden="true">F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230612153918723.png</figcaption>
-</figure>
-<figure>
-<img
-src="https://raw.githubusercontent.com/Center-cr/picture/main/202307091552451.png"
-alt="F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230612154045011.png" />
-<figcaption
-aria-hidden="true">F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230612154045011.png</figcaption>
-</figure>
-<figure>
-<img
-src="https://raw.githubusercontent.com/Center-cr/picture/main/202307091552024.png"
-alt="F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230612154108050.png" />
-<figcaption
-aria-hidden="true">F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230612154108050.png</figcaption>
-</figure>
-<figure>
-<img
-src="https://raw.githubusercontent.com/Center-cr/picture/main/202307091552824.png"
-alt="F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230612154130818.png" />
-<figcaption
-aria-hidden="true">F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230612154130818.png</figcaption>
-</figure>
-<figure>
-<img
-src="https://raw.githubusercontent.com/Center-cr/picture/main/202307091552950.png"
-alt="F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230612154334569.png" />
-<figcaption
-aria-hidden="true">F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230612154334569.png</figcaption>
-</figure>
-<figure>
-<img
-src="https://raw.githubusercontent.com/Center-cr/picture/main/202307091552193.png"
-alt="F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230612154759336.png" />
-<figcaption
-aria-hidden="true">F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230612154759336.png</figcaption>
-</figure>
-<figure>
-<img
-src="https://raw.githubusercontent.com/Center-cr/picture/main/202307091552795.png"
-alt="F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230612155658161.png" />
-<figcaption
-aria-hidden="true">F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230612155658161.png</figcaption>
-</figure>
-<figure>
-<img
-src="https://raw.githubusercontent.com/Center-cr/picture/main/202307091552686.png"
-alt="F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230612155837581.png" />
-<figcaption
-aria-hidden="true">F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230612155837581.png</figcaption>
-</figure>
-<figure>
-<img
-src="https://raw.githubusercontent.com/Center-cr/picture/main/202307091552699.png"
-alt="F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230612155929534.png" />
-<figcaption
-aria-hidden="true">F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230612155929534.png</figcaption>
-</figure>
-<figure>
-<img
-src="https://raw.githubusercontent.com/Center-cr/picture/main/202307091552833.png"
-alt="F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230612155955994.png" />
-<figcaption
-aria-hidden="true">F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230612155955994.png</figcaption>
-</figure>
-<figure>
-<img
-src="https://raw.githubusercontent.com/Center-cr/picture/main/202307091552062.png"
-alt="F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230612161131382.png" />
-<figcaption
-aria-hidden="true">F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230612161131382.png</figcaption>
-</figure>
-<figure>
-<img
-src="https://raw.githubusercontent.com/Center-cr/picture/main/202307091552666.png"
-alt="F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230612161145730.png" />
-<figcaption
-aria-hidden="true">F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230612161145730.png</figcaption>
-</figure>
-<figure>
-<img
-src="https://raw.githubusercontent.com/Center-cr/picture/main/202307091552145.png"
-alt="F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230612161200445.png" />
-<figcaption
-aria-hidden="true">F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230612161200445.png</figcaption>
-</figure>
-<figure>
-<img
-src="https://raw.githubusercontent.com/Center-cr/picture/main/202307091601055.png"
-alt="F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230612161214371.png" />
-<figcaption
-aria-hidden="true">F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230612161214371.png</figcaption>
-</figure>
-<figure>
-<img
-src="https://raw.githubusercontent.com/Center-cr/picture/main/202307091552514.png"
-alt="F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230612161433831.png" />
-<figcaption
-aria-hidden="true">F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230612161433831.png</figcaption>
-</figure>
-<figure>
-<img
-src="https://raw.githubusercontent.com/Center-cr/picture/main/202307091552111.png"
-alt="F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230612165511521.png" />
-<figcaption
-aria-hidden="true">F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230612165511521.png</figcaption>
-</figure>
-<figure>
-<img
-src="https://raw.githubusercontent.com/Center-cr/picture/main/202307091552928.png"
-alt="F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230612165545915.png" />
-<figcaption
-aria-hidden="true">F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230612165545915.png</figcaption>
-</figure>
-<figure>
-<img
-src="https://raw.githubusercontent.com/Center-cr/picture/main/202307091553062.png"
-alt="F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230612165719649.png" />
-<figcaption
-aria-hidden="true">F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230612165719649.png</figcaption>
-</figure>
-<figure>
-<img
-src="https://raw.githubusercontent.com/Center-cr/picture/main/202307091553998.png"
-alt="F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230612165739605.png" />
-<figcaption
-aria-hidden="true">F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230612165739605.png</figcaption>
-</figure>
-<figure>
-<img
-src="https://raw.githubusercontent.com/Center-cr/picture/main/202307091553886.png"
-alt="F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230612165844028.png" />
-<figcaption
-aria-hidden="true">F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230612165844028.png</figcaption>
-</figure>
-<figure>
-<img
-src="https://raw.githubusercontent.com/Center-cr/picture/main/202307091601626.png"
-alt="F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230612165856827.png" />
-<figcaption
-aria-hidden="true">F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230612165856827.png</figcaption>
-</figure>
-<figure>
-<img
-src="https://raw.githubusercontent.com/Center-cr/picture/main/202307091602411.png"
-alt="F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230612170016595.png" />
-<figcaption
-aria-hidden="true">F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230612170016595.png</figcaption>
-</figure>
-<figure>
-<img
-src="https://raw.githubusercontent.com/Center-cr/picture/main/202307091601220.png"
-alt="F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230612170029371.png" />
-<figcaption
-aria-hidden="true">F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230612170029371.png</figcaption>
-</figure>
-<figure>
-<img
-src="https://raw.githubusercontent.com/Center-cr/picture/main/202307091602627.png"
-alt="F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230612170053849.png" />
-<figcaption
-aria-hidden="true">F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230612170053849.png</figcaption>
-</figure>
-<h3 id="section-1">4</h3>
-<figure>
-<img
-src="https://raw.githubusercontent.com/Center-cr/picture/main/202307091602119.png"
-alt="F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230612170134707.png" />
-<figcaption
-aria-hidden="true">F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230612170134707.png</figcaption>
-</figure>
-<figure>
-<img
-src="https://raw.githubusercontent.com/Center-cr/picture/main/202307091602431.png"
-alt="F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230612170212036.png" />
-<figcaption
-aria-hidden="true">F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230612170212036.png</figcaption>
-</figure>
-<figure>
-<img
-src="https://raw.githubusercontent.com/Center-cr/picture/main/202307091602250.png"
-alt="F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230612170238226.png" />
-<figcaption
-aria-hidden="true">F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230612170238226.png</figcaption>
-</figure>
-<figure>
-<img
-src="https://raw.githubusercontent.com/Center-cr/picture/main/202307091607247.png"
-alt="F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230612170300064.png" />
-<figcaption
-aria-hidden="true">F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230612170300064.png</figcaption>
-</figure>
-<figure>
-<img
-src="https://raw.githubusercontent.com/Center-cr/picture/main/202307091603009.png"
-alt="F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230612170333914.png" />
-<figcaption
-aria-hidden="true">F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230612170333914.png</figcaption>
-</figure>
-<figure>
-<img
-src="https://raw.githubusercontent.com/Center-cr/picture/main/202307091603308.png"
-alt="F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230612170348608.png" />
-<figcaption
-aria-hidden="true">F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230612170348608.png</figcaption>
-</figure>
-<figure>
-<img
-src="https://raw.githubusercontent.com/Center-cr/picture/main/202307091603828.png"
-alt="F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230612170411804.png" />
-<figcaption
-aria-hidden="true">F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230612170411804.png</figcaption>
-</figure>
-<figure>
-<img
-src="https://raw.githubusercontent.com/Center-cr/picture/main/202307091603066.png"
-alt="F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230612170426721.png" />
-<figcaption
-aria-hidden="true">F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230612170426721.png</figcaption>
-</figure>
-<figure>
-<img
-src="https://raw.githubusercontent.com/Center-cr/picture/main/202307091603227.png"
-alt="F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230612170443482.png" />
-<figcaption
-aria-hidden="true">F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230612170443482.png</figcaption>
-</figure>
-<figure>
-<img
-src="https://raw.githubusercontent.com/Center-cr/picture/main/202307091603485.png"
-alt="F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230612170509338.png" />
-<figcaption
-aria-hidden="true">F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230612170509338.png</figcaption>
-</figure>
-<figure>
-<img
-src="https://raw.githubusercontent.com/Center-cr/picture/main/202307091603825.png"
-alt="F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230612170521734.png" />
-<figcaption
-aria-hidden="true">F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230612170521734.png</figcaption>
-</figure>
-<h2 id="作业">作业</h2>
-<h3 id="作业二-定点浮点单精度">作业二-定点浮点、单精度</h3>
-<figure>
-<img
-src="https://raw.githubusercontent.com/Center-cr/picture/main/202307091606893.png"
-alt="F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230613153223471.png" />
-<figcaption
-aria-hidden="true">F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230613153223471.png</figcaption>
-</figure>
-<figure>
-<img
-src="https://raw.githubusercontent.com/Center-cr/picture/main/202307091603960.png"
-alt="F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230613153144101.png" />
-<figcaption
-aria-hidden="true">F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230613153144101.png</figcaption>
-</figure>
-<h3 id="作业三-pieepwm">作业三-PIE/ePWM</h3>
-<figure>
-<img
-src="https://raw.githubusercontent.com/Center-cr/picture/main/202307091603374.png"
-alt="F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230613153409359.png" />
-<figcaption
-aria-hidden="true">F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230613153409359.png</figcaption>
-</figure>
-<figure>
-<img
-src="https://raw.githubusercontent.com/Center-cr/picture/main/202307091606031.png"
-alt="F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230613153446321.png" />
-<figcaption
-aria-hidden="true">F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230613153446321.png</figcaption>
-</figure>
-<figure>
-<img
-src="https://raw.githubusercontent.com/Center-cr/picture/main/202307091606254.png"
-alt="F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230613153517412.png" />
-<figcaption
-aria-hidden="true">F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230613153517412.png</figcaption>
-</figure>
-<figure>
-<img
-src="https://raw.githubusercontent.com/Center-cr/picture/main/202307091606881.png"
-alt="F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230613153531252.png" />
-<figcaption
-aria-hidden="true">F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230613153531252.png</figcaption>
-</figure>
-<h3 id="作业四-xintf">作业四-XINTF</h3>
-<figure>
-<img
-src="https://raw.githubusercontent.com/Center-cr/picture/main/202307091605616.png"
-alt="F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230613164444651.png" />
-<figcaption
-aria-hidden="true">F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230613164444651.png</figcaption>
-</figure>
-<figure>
-<img
-src="https://raw.githubusercontent.com/Center-cr/picture/main/202307091604522.png"
-alt="F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230613164535242.png" />
-<figcaption
-aria-hidden="true">F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230613164535242.png</figcaption>
-</figure>
-<figure>
-<img
-src="https://raw.githubusercontent.com/Center-cr/picture/main/202307091604929.png"
-alt="F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230613164608361.png" />
-<figcaption
-aria-hidden="true">F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230613164608361.png</figcaption>
-</figure>
-<figure>
-<img
-src="https://raw.githubusercontent.com/Center-cr/picture/main/202307091604991.png"
-alt="F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230613164710955.png" />
-<figcaption
-aria-hidden="true">F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230613164710955.png</figcaption>
-</figure>
-<figure>
-<img
-src="https://raw.githubusercontent.com/Center-cr/picture/main/202307091605707.png"
-alt="F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230613164737932.png" />
-<figcaption
-aria-hidden="true">F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230613164737932.png</figcaption>
-</figure>
-<figure>
-<img
-src="https://raw.githubusercontent.com/Center-cr/picture/main/202307091604959.png"
-alt="F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230612185018470.png" />
-<figcaption
-aria-hidden="true">F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230612185018470.png</figcaption>
-</figure>
+</tbody></table>
+<p> 总的来说，哈佛结构适合需要高效并行处理指令和数据的场景，而冯诺伊曼结构因其灵活的内存交互方式，更适合通用计算机等需要灵活使用内存的场景。</p>
+<p><img src="https://raw.githubusercontent.com/Center-cr/picture/main/202307091551411.png" alt=" F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230612152917977.png"></p>
+<p><img src="https://raw.githubusercontent.com/Center-cr/picture/main/202307091551395.png" alt=" F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230612153115743.png"></p>
+<p><img src="https://raw.githubusercontent.com/Center-cr/picture/main/202307091551447.png" alt=" F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230612153425755.png"></p>
+<p><img src="https://raw.githubusercontent.com/Center-cr/picture/main/202307091551593.png" alt=" F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230612153504656.png"></p>
+<p><img src="https://raw.githubusercontent.com/Center-cr/picture/main/202307091600630.png" alt=" F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230612153542683.png"></p>
+<p><img src="https://raw.githubusercontent.com/Center-cr/picture/main/202307091551248.png" alt=" F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230612153724876.png"></p>
+<p><img src="https://raw.githubusercontent.com/Center-cr/picture/main/202307091551393.png" alt=" F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230612153749758.png"></p>
+<p><img src="https://raw.githubusercontent.com/Center-cr/picture/main/202307091551646.png" alt=" F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230612153809091.png"></p>
+<p><img src="https://raw.githubusercontent.com/Center-cr/picture/main/202307091551379.png" alt=" F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230612153826070.png"></p>
+<p><img src="https://raw.githubusercontent.com/Center-cr/picture/main/202307091551749.png" alt=" F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230612153848056.png"></p>
+<p><img src="https://raw.githubusercontent.com/Center-cr/picture/main/202307091552481.png" alt=" F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230612153904305.png"></p>
+<p><img src="https://raw.githubusercontent.com/Center-cr/picture/main/202307091552348.png" alt=" F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230612153918723.png"></p>
+<p><img src="https://raw.githubusercontent.com/Center-cr/picture/main/202307091552451.png" alt=" F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230612154045011.png"></p>
+<p><img src="https://raw.githubusercontent.com/Center-cr/picture/main/202307091552024.png" alt=" F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230612154108050.png"></p>
+<p><img src="https://raw.githubusercontent.com/Center-cr/picture/main/202307091552824.png" alt=" F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230612154130818.png"></p>
+<p><img src="https://raw.githubusercontent.com/Center-cr/picture/main/202307091552950.png" alt=" F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230612154334569.png"></p>
+<p><img src="https://raw.githubusercontent.com/Center-cr/picture/main/202307091552193.png" alt=" F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230612154759336.png"></p>
+<p><img src="https://raw.githubusercontent.com/Center-cr/picture/main/202307091552795.png" alt=" F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230612155658161.png"></p>
+<p><img src="https://raw.githubusercontent.com/Center-cr/picture/main/202307091552686.png" alt=" F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230612155837581.png"></p>
+<p><img src="https://raw.githubusercontent.com/Center-cr/picture/main/202307091552699.png" alt=" F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230612155929534.png"></p>
+<p><img src="https://raw.githubusercontent.com/Center-cr/picture/main/202307091552833.png" alt=" F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230612155955994.png"></p>
+<p><img src="https://raw.githubusercontent.com/Center-cr/picture/main/202307091552062.png" alt=" F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230612161131382.png"></p>
+<p><img src="https://raw.githubusercontent.com/Center-cr/picture/main/202307091552666.png" alt=" F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230612161145730.png"></p>
+<p><img src="https://raw.githubusercontent.com/Center-cr/picture/main/202307091552145.png" alt=" F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230612161200445.png"></p>
+<p><img src="https://raw.githubusercontent.com/Center-cr/picture/main/202307091601055.png" alt=" F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230612161214371.png"></p>
+<p><img src="https://raw.githubusercontent.com/Center-cr/picture/main/202307091552514.png" alt=" F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230612161433831.png"></p>
+<p><img src="https://raw.githubusercontent.com/Center-cr/picture/main/202307091552111.png" alt=" F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230612165511521.png"></p>
+<p><img src="https://raw.githubusercontent.com/Center-cr/picture/main/202307091552928.png" alt=" F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230612165545915.png"></p>
+<p><img src="https://raw.githubusercontent.com/Center-cr/picture/main/202307091553062.png" alt=" F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230612165719649.png"></p>
+<p><img src="https://raw.githubusercontent.com/Center-cr/picture/main/202307091553998.png" alt=" F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230612165739605.png"></p>
+<p><img src="https://raw.githubusercontent.com/Center-cr/picture/main/202307091553886.png" alt=" F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230612165844028.png"></p>
+<p><img src="https://raw.githubusercontent.com/Center-cr/picture/main/202307091601626.png" alt=" F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230612165856827.png"></p>
+<p><img src="https://raw.githubusercontent.com/Center-cr/picture/main/202307091602411.png" alt=" F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230612170016595.png"></p>
+<p><img src="https://raw.githubusercontent.com/Center-cr/picture/main/202307091601220.png" alt=" F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230612170029371.png"></p>
+<p><img src="https://raw.githubusercontent.com/Center-cr/picture/main/202307091602627.png" alt=" F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230612170053849.png"></p>
+<h3 id="4"><a href="#4" class="headerlink" title="4"></a>4</h3><p><img src="https://raw.githubusercontent.com/Center-cr/picture/main/202307091602119.png" alt=" F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230612170134707.png"></p>
+<p><img src="https://raw.githubusercontent.com/Center-cr/picture/main/202307091602431.png" alt=" F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230612170212036.png"></p>
+<p><img src="https://raw.githubusercontent.com/Center-cr/picture/main/202307091602250.png" alt=" F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230612170238226.png"></p>
+<p><img src="https://raw.githubusercontent.com/Center-cr/picture/main/202307091607247.png" alt=" F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230612170300064.png"></p>
+<p><img src="https://raw.githubusercontent.com/Center-cr/picture/main/202307091603009.png" alt=" F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230612170333914.png"></p>
+<p><img src="https://raw.githubusercontent.com/Center-cr/picture/main/202307091603308.png" alt=" F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230612170348608.png"></p>
+<p><img src="https://raw.githubusercontent.com/Center-cr/picture/main/202307091603828.png" alt=" F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230612170411804.png"></p>
+<p><img src="https://raw.githubusercontent.com/Center-cr/picture/main/202307091603066.png" alt=" F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230612170426721.png"></p>
+<p><img src="https://raw.githubusercontent.com/Center-cr/picture/main/202307091603227.png" alt=" F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230612170443482.png"></p>
+<p><img src="https://raw.githubusercontent.com/Center-cr/picture/main/202307091603485.png" alt=" F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230612170509338.png"></p>
+<p><img src="https://raw.githubusercontent.com/Center-cr/picture/main/202307091603825.png" alt=" F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230612170521734.png"></p>
+<h2 id="作业"><a href="#作业" class="headerlink" title="作业"></a>作业</h2><h3 id="作业二-定点浮点、单精度"><a href="#作业二-定点浮点、单精度" class="headerlink" title="作业二-定点浮点、单精度"></a>作业二-定点浮点、单精度</h3><p><img src="https://raw.githubusercontent.com/Center-cr/picture/main/202307091606893.png" alt=" F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230613153223471.png"></p>
+<p><img src="https://raw.githubusercontent.com/Center-cr/picture/main/202307091603960.png" alt=" F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230613153144101.png"></p>
+<h3 id="作业三-PIE-ePWM"><a href="#作业三-PIE-ePWM" class="headerlink" title="作业三-PIE&#x2F;ePWM"></a>作业三-PIE&#x2F;ePWM</h3><p><img src="https://raw.githubusercontent.com/Center-cr/picture/main/202307091603374.png" alt=" F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230613153409359.png"></p>
+<p><img src="https://raw.githubusercontent.com/Center-cr/picture/main/202307091606031.png" alt=" F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230613153446321.png"></p>
+<p><img src="https://raw.githubusercontent.com/Center-cr/picture/main/202307091606254.png" alt=" F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230613153517412.png"></p>
+<p><img src="https://raw.githubusercontent.com/Center-cr/picture/main/202307091606881.png" alt=" F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230613153531252.png"></p>
+<h3 id="作业四-XINTF"><a href="#作业四-XINTF" class="headerlink" title="作业四-XINTF"></a>作业四-XINTF</h3><p><img src="https://raw.githubusercontent.com/Center-cr/picture/main/202307091605616.png" alt=" F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230613164444651.png"></p>
+<p><img src="https://raw.githubusercontent.com/Center-cr/picture/main/202307091604522.png" alt=" F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230613164535242.png"></p>
+<p><img src="https://raw.githubusercontent.com/Center-cr/picture/main/202307091604929.png" alt=" F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230613164608361.png"></p>
+<p><img src="https://raw.githubusercontent.com/Center-cr/picture/main/202307091604991.png" alt=" F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230613164710955.png"></p>
+<p><img src="https://raw.githubusercontent.com/Center-cr/picture/main/202307091605707.png" alt=" F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230613164737932.png"></p>
+<p><img src="https://raw.githubusercontent.com/Center-cr/picture/main/202307091604959.png" alt=" F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230612185018470.png"></p>
 <p>1)基址为0x100000</p>
-<figure>
-<img
-src="https://raw.githubusercontent.com/Center-cr/picture/main/202307091604086.png"
-alt="F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230612185055310.png" />
-<figcaption
-aria-hidden="true">F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230612185055310.png</figcaption>
-</figure>
-<h3 id="作业五-epwm">作业五-ePWM</h3>
-<figure>
-<img
-src="https://raw.githubusercontent.com/Center-cr/picture/main/202307091604129.png"
-alt="F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230613153932864.png" />
-<figcaption
-aria-hidden="true">F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230613153932864.png</figcaption>
-</figure>
-<figure>
-<img
-src="https://raw.githubusercontent.com/Center-cr/picture/main/202307091605729.png"
-alt="F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230613153954857.png" />
-<figcaption
-aria-hidden="true">F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230613153954857.png</figcaption>
-</figure>
-<figure>
-<img
-src="https://raw.githubusercontent.com/Center-cr/picture/main/202307091606255.png"
-alt="F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230613154230998.png" />
-<figcaption
-aria-hidden="true">F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230613154230998.png</figcaption>
-</figure>
-<figure>
-<img
-src="https://raw.githubusercontent.com/Center-cr/picture/main/202307091605131.png"
-alt="F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230613154250371.png" />
-<figcaption
-aria-hidden="true">F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230613154250371.png</figcaption>
-</figure>
-<figure>
-<img
-src="https://raw.githubusercontent.com/Center-cr/picture/main/202307091606761.png"
-alt="F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230613154317896.png" />
-<figcaption
-aria-hidden="true">F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230613154317896.png</figcaption>
-</figure>
-<figure>
-<img
-src="https://raw.githubusercontent.com/Center-cr/picture/main/202307091606333.png"
-alt="F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230613154338570.png" />
-<figcaption
-aria-hidden="true">F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230613154338570.png</figcaption>
-</figure>
-<h2 id="大纲">大纲</h2>
-<h3 id="第一章">第一章</h3>
-<h4 id="实时性两层含义">实时性两层含义</h4>
-<figure>
-<img
-src="https://raw.githubusercontent.com/Center-cr/picture/main/202307091608283.png"
-alt="F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230612203533370.png" />
-<figcaption
-aria-hidden="true">F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230612203533370.png</figcaption>
-</figure>
-<h4 id="计算实时处理最低速度">计算实时处理最低速度</h4>
-<figure>
-<img
-src="https://raw.githubusercontent.com/Center-cr/picture/main/202307091608127.png"
-alt="F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230612203820461.png" />
-<figcaption
-aria-hidden="true">F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230612203820461.png</figcaption>
-</figure>
-<h4 id="系统框图">系统框图</h4>
-<figure>
-<img
-src="https://raw.githubusercontent.com/Center-cr/picture/main/202307091608226.png"
-alt="F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230612204922068.png" />
-<figcaption
-aria-hidden="true">F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230612204922068.png</figcaption>
-</figure>
-<figure>
-<img
-src="https://raw.githubusercontent.com/Center-cr/picture/main/202307091608474.png"
-alt="F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230612210045840.png" />
-<figcaption
-aria-hidden="true">F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230612210045840.png</figcaption>
-</figure>
-<figure>
-<img
-src="https://raw.githubusercontent.com/Center-cr/picture/main/202307091608618.png"
-alt="F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230612210015578.png" />
-<figcaption
-aria-hidden="true">F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230612210015578.png</figcaption>
-</figure>
-<h4 id="数据流处理和数据块处理">数据流处理和数据块处理</h4>
-<p>数据流处理（Stream Processing）</p>
-<p>数据是在一个输入样本到达后，就立即开始进行与该
-样本有关的运算，并在下一个样本到达之前完成。这种
-在下一个样本输入之前完成上一个样本处理的方法称为
-数据流处理方式。例如数字FIR滤波。</p>
-<p>特点：每接收一个样本，就做一次新的运算。输
-入样本周期与输出样本周期保持一致。</p>
-<p>优点：其结果是随时更新的。输出样本和其影响
-的输出结果之间的时延达到理论的最小值。</p>
-<p>缺点：要求处理器的速度必须足够高，能在下一
-个样本到达之前完成所有计算。</p>
-<p>块处理（Block Processing）</p>
-<p>首先将输入样本存放到存储器中，当L个输入样本都
-到达以后，才开始处理。这种同时处理多个样本的方法
-称为块处理技术，也叫帧处理（Frame Processing）。
-在块处理技术中，输入样本按组存储，当有足够多的
-样本到达后，开始处理这个样本块。主要应用在输出采
-样率小于输入采样率(采用间隔T)的场合，其计算时间限 制在LT 以内。
-譬如傅里叶变换运算。</p>
-<p>优点：减少频繁读写存储器所带来的额外开销，获
-得较高处理效率；可以使用较低速度的处理器。</p>
+<p><img src="https://raw.githubusercontent.com/Center-cr/picture/main/202307091604086.png" alt=" F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230612185055310.png"></p>
+<h3 id="作业五-ePWM"><a href="#作业五-ePWM" class="headerlink" title="作业五-ePWM"></a>作业五-ePWM</h3><p><img src="https://raw.githubusercontent.com/Center-cr/picture/main/202307091604129.png" alt=" F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230613153932864.png"></p>
+<p><img src="https://raw.githubusercontent.com/Center-cr/picture/main/202307091605729.png" alt=" F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230613153954857.png"></p>
+<p><img src="https://raw.githubusercontent.com/Center-cr/picture/main/202307091606255.png" alt=" F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230613154230998.png"></p>
+<p><img src="https://raw.githubusercontent.com/Center-cr/picture/main/202307091605131.png" alt=" F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230613154250371.png"></p>
+<p><img src="https://raw.githubusercontent.com/Center-cr/picture/main/202307091606761.png" alt=" F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230613154317896.png"></p>
+<p><img src="https://raw.githubusercontent.com/Center-cr/picture/main/202307091606333.png" alt=" F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230613154338570.png"></p>
+<h2 id="大纲"><a href="#大纲" class="headerlink" title="大纲"></a>大纲</h2><h3 id="第一章"><a href="#第一章" class="headerlink" title="第一章"></a>第一章</h3><h4 id="实时性两层含义"><a href="#实时性两层含义" class="headerlink" title="实时性两层含义"></a>实时性两层含义</h4><p><img src="https://raw.githubusercontent.com/Center-cr/picture/main/202307091608283.png" alt=" F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230612203533370.png"></p>
+<h4 id="计算实时处理最低速度"><a href="#计算实时处理最低速度" class="headerlink" title="计算实时处理最低速度"></a>计算实时处理最低速度</h4><p><img src="https://raw.githubusercontent.com/Center-cr/picture/main/202307091608127.png" alt=" F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230612203820461.png"></p>
+<h4 id="系统框图"><a href="#系统框图" class="headerlink" title="系统框图"></a>系统框图</h4><p><img src="https://raw.githubusercontent.com/Center-cr/picture/main/202307091608226.png" alt=" F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230612204922068.png"></p>
+<p><img src="https://raw.githubusercontent.com/Center-cr/picture/main/202307091608474.png" alt=" F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230612210045840.png"></p>
+<p><img src="https://raw.githubusercontent.com/Center-cr/picture/main/202307091608618.png" alt=" F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230612210015578.png"></p>
+<h4 id="数据流处理和数据块处理"><a href="#数据流处理和数据块处理" class="headerlink" title="数据流处理和数据块处理"></a>数据流处理和数据块处理</h4><p>数据流处理（Stream Processing）</p>
+<p>数据是在一个输入样本到达后，就立即开始进行与该 样本有关的运算，并在下一个样本到达之前完成。这种 在下一个样本输入之前完成上一个样本处理的方法称为 数据流处理方式。例如数字FIR滤波。</p>
+<p>特点：每接收一个样本，就做一次新的运算。输 入样本周期与输出样本周期保持一致。</p>
+<p> 优点：其结果是随时更新的。输出样本和其影响 的输出结果之间的时延达到理论的最小值。 </p>
+<p>缺点：要求处理器的速度必须足够高，能在下一 个样本到达之前完成所有计算。</p>
+<p>块处理（Block Processing） </p>
+<p>首先将输入样本存放到存储器中，当L个输入样本都 到达以后，才开始处理。这种同时处理多个样本的方法 称为块处理技术，也叫帧处理（Frame Processing）。 在块处理技术中，输入样本按组存储，当有足够多的 样本到达后，开始处理这个样本块。主要应用在输出采 样率小于输入采样率(采用间隔T)的场合，其计算时间限 制在LT 以内。 譬如傅里叶变换运算。</p>
+<p>优点：减少频繁读写存储器所带来的额外开销，获 得较高处理效率；可以使用较低速度的处理器。 </p>
 <p>缺点：时延以及足够的存储空间。</p>
-<p>矢量处理（Vector Processing）
-同时处理多路输入/输出信号的方法，称为矢量 处理技术。
-通常情况下，矢量处理用来计算两个信号之间 的相关程度。</p>
-<h4 id="分类">分类</h4>
-<figure>
-<img
-src="https://raw.githubusercontent.com/Center-cr/picture/main/202307091608471.png"
-alt="F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230612211355861.png" />
-<figcaption
-aria-hidden="true">F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230612211355861.png</figcaption>
-</figure>
-<h4 id="定点浮点转换">定点浮点转换</h4>
-<figure>
-<img
-src="https://raw.githubusercontent.com/Center-cr/picture/main/202307091616833.png"
-alt="F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230612140835736.png" />
-<figcaption
-aria-hidden="true">F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230612140835736.png</figcaption>
-</figure>
-<figure>
-<img
-src="https://raw.githubusercontent.com/Center-cr/picture/main/202307091616350.png"
-alt="F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230612151010938.png" />
-<figcaption
-aria-hidden="true">F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230612151010938.png</figcaption>
-</figure>
-<figure>
-<img
-src="https://raw.githubusercontent.com/Center-cr/picture/main/202307091608891.png"
-alt="F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230612151959846.png" />
-<figcaption
-aria-hidden="true">F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230612151959846.png</figcaption>
-</figure>
-<h4 id="哈佛结构和冯诺伊曼结构">哈佛结构和冯诺伊曼结构</h4>
-<figure>
-<img
-src="https://raw.githubusercontent.com/Center-cr/picture/main/202307091609021.png"
-alt="F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230612211908276.png" />
-<figcaption
-aria-hidden="true">F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230612211908276.png</figcaption>
-</figure>
-<p>哈佛结构和冯诺伊曼结构是两种常见的计算机体系结构，它们的主要区别在于内存和处理器之间的交互方式。
-1. 冯诺伊曼结构
-在冯诺伊曼结构中，处理器和存储器使用同一个总线连接，也就是说，数据和指令共享同一个内存空间。当处理器需要执行一个指令时，它从内存中读取指令并进行解码。这种结构被广泛应用于大部分的传统计算机中。
-2. 哈佛结构
-哈佛结构中，处理器和存储器分别使用独立的总线连接，也就是说，指令和数据存储在两个不同的内存空间中。由于指令和数据互相独立，处理器可以同时执行多个指令，这种结构被广泛应用于嵌入式系统和数字信号处理器等领域。</p>
+<p>矢量处理（Vector Processing） 同时处理多路输入&#x2F;输出信号的方法，称为矢量 处理技术。 通常情况下，矢量处理用来计算两个信号之间 的相关程度。</p>
+<h4 id="分类"><a href="#分类" class="headerlink" title="分类"></a>分类</h4><p><img src="https://raw.githubusercontent.com/Center-cr/picture/main/202307091608471.png" alt=" F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230612211355861.png"></p>
+<h4 id="定点浮点转换"><a href="#定点浮点转换" class="headerlink" title="定点浮点转换"></a>定点浮点转换</h4><p><img src="https://raw.githubusercontent.com/Center-cr/picture/main/202307091616833.png" alt=" F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230612140835736.png"></p>
+<p><img src="https://raw.githubusercontent.com/Center-cr/picture/main/202307091616350.png" alt=" F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230612151010938.png"></p>
+<p><img src="https://raw.githubusercontent.com/Center-cr/picture/main/202307091608891.png" alt=" F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230612151959846.png"></p>
+<h4 id="哈佛结构和冯诺伊曼结构"><a href="#哈佛结构和冯诺伊曼结构" class="headerlink" title="哈佛结构和冯诺伊曼结构"></a>哈佛结构和冯诺伊曼结构</h4><p><img src="https://raw.githubusercontent.com/Center-cr/picture/main/202307091609021.png" alt=" F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230612211908276.png"></p>
+<p>哈佛结构和冯诺伊曼结构是两种常见的计算机体系结构，它们的主要区别在于内存和处理器之间的交互方式。 1. 冯诺伊曼结构 在冯诺伊曼结构中，处理器和存储器使用同一个总线连接，也就是说，数据和指令共享同一个内存空间。当处理器需要执行一个指令时，它从内存中读取指令并进行解码。这种结构被广泛应用于大部分的传统计算机中。 2. 哈佛结构 哈佛结构中，处理器和存储器分别使用独立的总线连接，也就是说，指令和数据存储在两个不同的内存空间中。由于指令和数据互相独立，处理器可以同时执行多个指令，这种结构被广泛应用于嵌入式系统和数字信号处理器等领域。</p>
 <p>可以总结如下：</p>
 <table>
-<colgroup>
-<col style="width: 7%" />
-<col style="width: 54%" />
-<col style="width: 37%" />
-</colgroup>
 <thead>
-<tr class="header">
-<th style="text-align: center;">特点</th>
-<th style="text-align: center;">冯诺伊曼结构</th>
-<th style="text-align: center;">哈佛结构</th>
+<tr>
+<th align="center">特点</th>
+<th align="center">冯诺伊曼结构</th>
+<th align="center">哈佛结构</th>
 </tr>
 </thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: center;">内存结构</td>
-<td style="text-align: center;">存储器与处理器共享一个内存空间</td>
-<td style="text-align: center;">指令内存与数据内存独立</td>
+<tbody><tr>
+<td align="center">内存结构</td>
+<td align="center">存储器与处理器共享一个内存空间</td>
+<td align="center">指令内存与数据内存独立</td>
 </tr>
-<tr class="even">
-<td style="text-align: center;">处理速度</td>
-<td style="text-align: center;">数据和指令共享总线，处理速度较慢</td>
-<td style="text-align: center;">数据和指令独立，处理速度较快</td>
+<tr>
+<td align="center">处理速度</td>
+<td align="center">数据和指令共享总线，处理速度较慢</td>
+<td align="center">数据和指令独立，处理速度较快</td>
 </tr>
-<tr class="odd">
-<td style="text-align: center;">优缺点</td>
-<td
-style="text-align: center;">可以灵活地利用内存空间，但指令与数据交错访问有时会出现瓶颈</td>
-<td
-style="text-align: center;">可同时处理多个指令，但需要更多的内存空间</td>
+<tr>
+<td align="center">优缺点</td>
+<td align="center">可以灵活地利用内存空间，但指令与数据交错访问有时会出现瓶颈</td>
+<td align="center">可同时处理多个指令，但需要更多的内存空间</td>
 </tr>
-<tr class="even">
-<td style="text-align: center;">适用场景</td>
-<td style="text-align: center;">通用计算机</td>
-<td style="text-align: center;">嵌入式系统和数字信号处理器</td>
+<tr>
+<td align="center">适用场景</td>
+<td align="center">通用计算机</td>
+<td align="center">嵌入式系统和数字信号处理器</td>
 </tr>
-</tbody>
-</table>
-<p>总的来说，哈佛结构适合需要高效并行处理指令和数据的场景，而冯诺伊曼结构因其灵活的内存交互方式，更适合通用计算机等需要灵活使用内存的场景。</p>
+</tbody></table>
+<p> 总的来说，哈佛结构适合需要高效并行处理指令和数据的场景，而冯诺伊曼结构因其灵活的内存交互方式，更适合通用计算机等需要灵活使用内存的场景。</p>
 <table>
-<colgroup>
-<col style="width: 13%" />
-<col style="width: 35%" />
-<col style="width: 51%" />
-</colgroup>
 <thead>
-<tr class="header">
+<tr>
 <th></th>
 <th>哈佛结构</th>
 <th>改进的哈佛结构</th>
 </tr>
 </thead>
-<tbody>
-<tr class="odd">
+<tbody><tr>
 <td>总线</td>
 <td>处理器和存储器独立的总线</td>
 <td>处理器和快取共享总线</td>
 </tr>
-<tr class="even">
+<tr>
 <td>数据与指令</td>
 <td>数据和指令存储分开</td>
 <td>同时使用指令快取和数据快取</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>并行性</td>
 <td>可以并行执行多个指令</td>
 <td>并行性更高，处理数据更快</td>
 </tr>
-<tr class="even">
+<tr>
 <td>应用</td>
 <td>嵌入式系统、数字信号处理器</td>
 <td>大型服务器、超级计算机、大型计算机系统</td>
 </tr>
-</tbody>
-</table>
-<h4 id="乘加特点">乘加特点</h4>
-<figure>
-<img
-src="https://raw.githubusercontent.com/Center-cr/picture/main/202307091609402.png"
-alt="F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230612213530821.png" />
-<figcaption
-aria-hidden="true">F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230612213530821.png</figcaption>
-</figure>
-<h4 id="其他特点">其他特点</h4>
-<figure>
-<img
-src="https://raw.githubusercontent.com/Center-cr/picture/main/202307091609318.png"
-alt="F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230612213644417.png" />
-<figcaption
-aria-hidden="true">F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230612213644417.png</figcaption>
-</figure>
-<figure>
-<img
-src="https://raw.githubusercontent.com/Center-cr/picture/main/202307091609583.png"
-alt="F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230612213702887.png" />
-<figcaption
-aria-hidden="true">F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230612213702887.png</figcaption>
-</figure>
-<figure>
-<img
-src="https://raw.githubusercontent.com/Center-cr/picture/main/202307091609140.png"
-alt="F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230612213729604.png" />
-<figcaption
-aria-hidden="true">F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230612213729604.png</figcaption>
-</figure>
-<figure>
-<img
-src="https://raw.githubusercontent.com/Center-cr/picture/main/202307091609562.png"
-alt="F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230612213800598.png" />
-<figcaption
-aria-hidden="true">F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230612213800598.png</figcaption>
-</figure>
-<h4 id="mipsmopsmflopsmacs-的含义">MIPS、MOPS、MFLOPS、MACS 的含义</h4>
-<figure>
-<img
-src="https://raw.githubusercontent.com/Center-cr/picture/main/202307091609425.png"
-alt="F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230612213911203.png" />
-<figcaption
-aria-hidden="true">F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230612213911203.png</figcaption>
-</figure>
-<h3 id="第二章">第二章</h3>
-<h4 id="一般-dsp-系统框架图组成部分">一般 DSP 系统框架图组成部分：</h4>
-<p>①总线和存储器②内核（CPU） ③外设（决定功能）</p>
-<figure>
-<img
-src="https://raw.githubusercontent.com/Center-cr/picture/main/202307091609087.png"
-alt="F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230613124615745.png" />
-<figcaption
-aria-hidden="true">F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230613124615745.png</figcaption>
-</figure>
-<figure>
-<img
-src="https://raw.githubusercontent.com/Center-cr/picture/main/202307091610252.png"
-alt="F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230612214942983.png" />
-<figcaption
-aria-hidden="true">F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230612214942983.png</figcaption>
-</figure>
-<figure>
-<img
-src="https://raw.githubusercontent.com/Center-cr/picture/main/202307091609943.png"
-alt="F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230612153425755.png" />
-<figcaption
-aria-hidden="true">F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230612153425755.png</figcaption>
-</figure>
-<figure>
-<img
-src="https://raw.githubusercontent.com/Center-cr/picture/main/202307091609076.png"
-alt="F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230612215234136.png" />
-<figcaption
-aria-hidden="true">F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230612215234136.png</figcaption>
-</figure>
-<h4 id="根据器件手册配置寄存器">根据器件手册配置寄存器</h4>
-<h4
-id="总线结构那张图和总结表格能正确标注各条数据地址线">总线结构那张图和总结表格，能正确标注各条数据地址线</h4>
-<figure>
-<img
-src="https://raw.githubusercontent.com/Center-cr/picture/main/202307091610683.png"
-alt="F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230612152917977.png" />
-<figcaption
-aria-hidden="true">F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230612152917977.png</figcaption>
-</figure>
+</tbody></table>
+<h4 id="乘加特点"><a href="#乘加特点" class="headerlink" title="乘加特点"></a>乘加特点</h4><p><img src="https://raw.githubusercontent.com/Center-cr/picture/main/202307091609402.png" alt=" F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230612213530821.png"></p>
+<h4 id="其他特点"><a href="#其他特点" class="headerlink" title="其他特点"></a>其他特点</h4><p><img src="https://raw.githubusercontent.com/Center-cr/picture/main/202307091609318.png" alt=" F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230612213644417.png"></p>
+<p><img src="https://raw.githubusercontent.com/Center-cr/picture/main/202307091609583.png" alt=" F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230612213702887.png"></p>
+<p><img src="https://raw.githubusercontent.com/Center-cr/picture/main/202307091609140.png" alt=" F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230612213729604.png"></p>
+<p><img src="https://raw.githubusercontent.com/Center-cr/picture/main/202307091609562.png" alt=" F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230612213800598.png"></p>
+<h4 id="MIPS、MOPS、MFLOPS、MACS-的含义"><a href="#MIPS、MOPS、MFLOPS、MACS-的含义" class="headerlink" title="MIPS、MOPS、MFLOPS、MACS 的含义"></a>MIPS、MOPS、MFLOPS、MACS 的含义</h4><p><img src="https://raw.githubusercontent.com/Center-cr/picture/main/202307091609425.png" alt=" F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230612213911203.png"></p>
+<h3 id="第二章"><a href="#第二章" class="headerlink" title="第二章"></a>第二章</h3><h4 id="一般-DSP-系统框架图组成部分："><a href="#一般-DSP-系统框架图组成部分：" class="headerlink" title="一般 DSP 系统框架图组成部分："></a>一般 DSP 系统框架图组成部分：</h4><p>①总线和存储器②内核（CPU） ③外设（决定功能）</p>
+<p><img src="https://raw.githubusercontent.com/Center-cr/picture/main/202307091609087.png" alt=" F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230613124615745.png"></p>
+<p><img src="https://raw.githubusercontent.com/Center-cr/picture/main/202307091610252.png" alt=" F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230612214942983.png"></p>
+<p><img src="https://raw.githubusercontent.com/Center-cr/picture/main/202307091609943.png" alt=" F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230612153425755.png"></p>
+<p><img src="https://raw.githubusercontent.com/Center-cr/picture/main/202307091609076.png" alt=" F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230612215234136.png"></p>
+<h4 id="根据器件手册配置寄存器"><a href="#根据器件手册配置寄存器" class="headerlink" title="根据器件手册配置寄存器"></a>根据器件手册配置寄存器</h4><h4 id="总线结构那张图和总结表格，能正确标注各条数据地址线"><a href="#总线结构那张图和总结表格，能正确标注各条数据地址线" class="headerlink" title="总线结构那张图和总结表格，能正确标注各条数据地址线"></a>总线结构那张图和总结表格，能正确标注各条数据地址线</h4><p><img src="https://raw.githubusercontent.com/Center-cr/picture/main/202307091610683.png" alt=" F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230612152917977.png"></p>
 <ul>
-<li><p>PAB（Peripheral Address
-Bus）：外设地址总线，用于传输外设的地址信息。</p></li>
-<li><p>DRAB（Data Read Address
-Bus）：数据读取地址总线，用于传输CPU从内存或外设中读取数据时的地址信息。</p></li>
-<li><p>DWAB（Data Write Address
-Bus）：数据写入地址总线，用于传输CPU向内存或外设中写入数据时的地址信息。</p></li>
-<li><p>PRDB（Peripheral Read Data
-Bus）：外设读取数据总线，用于传输外设向CPU返回数据。</p></li>
-<li><p>DRDB（Data Read Data
-Bus）：数据读取数据总线，用于传输CPU从内存或外设中读取的数据。</p></li>
-<li><p>DWDB（Data Write Data
-Bus）：数据写入数据总线，用于传输CPU向内存或外设中写入的数据。</p></li>
+<li><p>PAB（Peripheral Address Bus）：外设地址总线，用于传输外设的地址信息。</p>
+</li>
+<li><p>DRAB（Data Read Address Bus）：数据读取地址总线，用于传输CPU从内存或外设中读取数据时的地址信息。</p>
+</li>
+<li><p>DWAB（Data Write Address Bus）：数据写入地址总线，用于传输CPU向内存或外设中写入数据时的地址信息。 </p>
+</li>
+<li><p>PRDB（Peripheral Read Data Bus）：外设读取数据总线，用于传输外设向CPU返回数据。 </p>
+</li>
+<li><p>DRDB（Data Read Data Bus）：数据读取数据总线，用于传输CPU从内存或外设中读取的数据。 </p>
+</li>
+<li><p>DWDB（Data Write Data Bus）：数据写入数据总线，用于传输CPU向内存或外设中写入的数据。</p>
+</li>
 </ul>
-<h4 id="重复指令-rpt">重复指令 RPT</h4>
-<h4
-id="中断控制能描述-2.5.4-节中中断响应流程描述过程不必画出来理-解-pie-级中断系统三级结构">中断控制，能描述
-2.5.4 节中中断响应流程（描述过程，不必画出来）；理 解 PIE
-级中断系统三级结构</h4>
-<figure>
-<img
-src="https://raw.githubusercontent.com/Center-cr/picture/main/202307091610163.png"
-alt="F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230612221602244.png" />
-<figcaption
-aria-hidden="true">F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230612221602244.png</figcaption>
-</figure>
-<figure>
-<img
-src="https://raw.githubusercontent.com/Center-cr/picture/main/202307091610119.png"
-alt="F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230612221635507.png" />
-<figcaption
-aria-hidden="true">F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230612221635507.png</figcaption>
-</figure>
-<figure>
-<img
-src="https://raw.githubusercontent.com/Center-cr/picture/main/202307091610318.png"
-alt="F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230612222127689.png" />
-<figcaption
-aria-hidden="true">F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230612222127689.png</figcaption>
-</figure>
-<h4 id="dsp-配置外部存储器">DSP 配置外部存储器</h4>
-<figure>
-<img
-src="https://raw.githubusercontent.com/Center-cr/picture/main/202307091610816.png"
-alt="F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230612154759336.png" />
-<figcaption
-aria-hidden="true">F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230612154759336.png</figcaption>
-</figure>
-<figure>
-<img
-src="https://raw.githubusercontent.com/Center-cr/picture/main/202307091618075.png"
-alt="F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230612222452487.png" />
-<figcaption
-aria-hidden="true">F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230612222452487.png</figcaption>
-</figure>
-<figure>
-<img
-src="https://raw.githubusercontent.com/Center-cr/picture/main/202307091610495.png"
-alt="F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230612222821373.png" />
-<figcaption
-aria-hidden="true">F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230612222821373.png</figcaption>
-</figure>
-<figure>
-<img
-src="https://raw.githubusercontent.com/Center-cr/picture/main/202307091556126.png"
-alt="F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230612155658161.png" />
-<figcaption
-aria-hidden="true">F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230612155658161.png</figcaption>
-</figure>
-<h4
-id="定时器给出-ppt-中原理图和寄存器值计算中断频率公式不会给出-最好理解-2.7.4-同步串口的工作机理">定时器给出
-ppt 中原理图和寄存器值，计算中断频率（公式不会给出） 最好理解 2.7.4
-同步串口的工作机理</h4>
-<h3 id="第三章">第三章</h3>
-<figure>
-<img
-src="https://raw.githubusercontent.com/Center-cr/picture/main/202307091556498.png"
-alt="F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230613144958255.png" />
-<figcaption
-aria-hidden="true">F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230613144958255.png</figcaption>
-</figure>
-<figure>
-<img
-src="https://raw.githubusercontent.com/Center-cr/picture/main/202307091556076.png"
-alt="F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230613145359926.png" />
-<figcaption
-aria-hidden="true">F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230613145359926.png</figcaption>
-</figure>
-<figure>
-<img
-src="https://raw.githubusercontent.com/Center-cr/picture/main/202307091556038.png"
-alt="F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230613144541608.png" />
-<figcaption
-aria-hidden="true">F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230613144541608.png</figcaption>
-</figure>
-<figure>
-<img
-src="https://raw.githubusercontent.com/Center-cr/picture/main/202307091556386.png"
-alt="F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230613145511050.png" />
-<figcaption
-aria-hidden="true">F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230613145511050.png</figcaption>
-</figure>
-<figure>
-<img
-src="https://raw.githubusercontent.com/Center-cr/picture/main/202307091556251.png"
-alt="F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230613145537076.png" />
-<figcaption
-aria-hidden="true">F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230613145537076.png</figcaption>
-</figure>
-<figure>
-<img
-src="https://raw.githubusercontent.com/Center-cr/picture/main/202307091556565.png"
-alt="F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230613150628651.png" />
-<figcaption
-aria-hidden="true">F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230613150628651.png</figcaption>
-</figure>
-<figure>
-<img
-src="https://raw.githubusercontent.com/Center-cr/picture/main/202307091556706.png"
-alt="F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230613150720024.png" />
-<figcaption
-aria-hidden="true">F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230613150720024.png</figcaption>
-</figure>
-</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="http://example.com">Center-cr</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="http://example.com/2023/07/01/%E4%B8%93%E4%B8%9A%E8%AF%BE/DSP/">http://example.com/2023/07/01/%E4%B8%93%E4%B8%9A%E8%AF%BE/DSP/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://example.com" target="_blank">Center-cr's Blog</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/DSP%E5%BA%94%E7%94%A8/">DSP应用</a></div><div class="post_share"><div class="social-share" data-image="https://raw.githubusercontent.com/Center-cr/picture/main/202307091559166.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="/pluginsSrc/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="/pluginsSrc/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2023/07/01/file/" title="test"><img class="cover" src="https://raw.githubusercontent.com/Center-cr/picture/main/202307091705540.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">test</div></div></a></div><div class="next-post pull-right"><a href="/2023/07/01/%E4%B8%93%E4%B8%9A%E8%AF%BE/%E5%A4%A9%E7%BA%BF%E4%B8%8E%E7%94%B5%E6%B3%A2%E4%BC%A0%E6%92%AD/" title="天线与电波传播-总结"><img class="cover" src="https://raw.githubusercontent.com/Center-cr/picture/main/202307091549837.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">天线与电波传播-总结</div></div></a></div></nav><hr class="custom-hr"/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div id="gitalk-container"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#ppt%E9%87%8D%E7%82%B9"><span class="toc-text">ppt重点</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#section"><span class="toc-text">2</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#section-1"><span class="toc-text">4</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BD%9C%E4%B8%9A"><span class="toc-text">作业</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BD%9C%E4%B8%9A%E4%BA%8C-%E5%AE%9A%E7%82%B9%E6%B5%AE%E7%82%B9%E5%8D%95%E7%B2%BE%E5%BA%A6"><span class="toc-text">作业二-定点浮点、单精度</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BD%9C%E4%B8%9A%E4%B8%89-pieepwm"><span class="toc-text">作业三-PIE&#x2F;ePWM</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BD%9C%E4%B8%9A%E5%9B%9B-xintf"><span class="toc-text">作业四-XINTF</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BD%9C%E4%B8%9A%E4%BA%94-epwm"><span class="toc-text">作业五-ePWM</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A4%A7%E7%BA%B2"><span class="toc-text">大纲</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E7%AB%A0"><span class="toc-text">第一章</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AE%9E%E6%97%B6%E6%80%A7%E4%B8%A4%E5%B1%82%E5%90%AB%E4%B9%89"><span class="toc-text">实时性两层含义</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%AE%A1%E7%AE%97%E5%AE%9E%E6%97%B6%E5%A4%84%E7%90%86%E6%9C%80%E4%BD%8E%E9%80%9F%E5%BA%A6"><span class="toc-text">计算实时处理最低速度</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%B3%BB%E7%BB%9F%E6%A1%86%E5%9B%BE"><span class="toc-text">系统框图</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E6%B5%81%E5%A4%84%E7%90%86%E5%92%8C%E6%95%B0%E6%8D%AE%E5%9D%97%E5%A4%84%E7%90%86"><span class="toc-text">数据流处理和数据块处理</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%88%86%E7%B1%BB"><span class="toc-text">分类</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AE%9A%E7%82%B9%E6%B5%AE%E7%82%B9%E8%BD%AC%E6%8D%A2"><span class="toc-text">定点浮点转换</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%93%88%E4%BD%9B%E7%BB%93%E6%9E%84%E5%92%8C%E5%86%AF%E8%AF%BA%E4%BC%8A%E6%9B%BC%E7%BB%93%E6%9E%84"><span class="toc-text">哈佛结构和冯诺伊曼结构</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B9%98%E5%8A%A0%E7%89%B9%E7%82%B9"><span class="toc-text">乘加特点</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%85%B6%E4%BB%96%E7%89%B9%E7%82%B9"><span class="toc-text">其他特点</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#mipsmopsmflopsmacs-%E7%9A%84%E5%90%AB%E4%B9%89"><span class="toc-text">MIPS、MOPS、MFLOPS、MACS 的含义</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E7%AB%A0"><span class="toc-text">第二章</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%80%E8%88%AC-dsp-%E7%B3%BB%E7%BB%9F%E6%A1%86%E6%9E%B6%E5%9B%BE%E7%BB%84%E6%88%90%E9%83%A8%E5%88%86"><span class="toc-text">一般 DSP 系统框架图组成部分：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%A0%B9%E6%8D%AE%E5%99%A8%E4%BB%B6%E6%89%8B%E5%86%8C%E9%85%8D%E7%BD%AE%E5%AF%84%E5%AD%98%E5%99%A8"><span class="toc-text">根据器件手册配置寄存器</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%80%BB%E7%BA%BF%E7%BB%93%E6%9E%84%E9%82%A3%E5%BC%A0%E5%9B%BE%E5%92%8C%E6%80%BB%E7%BB%93%E8%A1%A8%E6%A0%BC%E8%83%BD%E6%AD%A3%E7%A1%AE%E6%A0%87%E6%B3%A8%E5%90%84%E6%9D%A1%E6%95%B0%E6%8D%AE%E5%9C%B0%E5%9D%80%E7%BA%BF"><span class="toc-text">总线结构那张图和总结表格，能正确标注各条数据地址线</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%87%8D%E5%A4%8D%E6%8C%87%E4%BB%A4-rpt"><span class="toc-text">重复指令 RPT</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%AD%E6%96%AD%E6%8E%A7%E5%88%B6%E8%83%BD%E6%8F%8F%E8%BF%B0-2.5.4-%E8%8A%82%E4%B8%AD%E4%B8%AD%E6%96%AD%E5%93%8D%E5%BA%94%E6%B5%81%E7%A8%8B%E6%8F%8F%E8%BF%B0%E8%BF%87%E7%A8%8B%E4%B8%8D%E5%BF%85%E7%94%BB%E5%87%BA%E6%9D%A5%E7%90%86-%E8%A7%A3-pie-%E7%BA%A7%E4%B8%AD%E6%96%AD%E7%B3%BB%E7%BB%9F%E4%B8%89%E7%BA%A7%E7%BB%93%E6%9E%84"><span class="toc-text">中断控制，能描述
-2.5.4 节中中断响应流程（描述过程，不必画出来）；理 解 PIE
-级中断系统三级结构</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#dsp-%E9%85%8D%E7%BD%AE%E5%A4%96%E9%83%A8%E5%AD%98%E5%82%A8%E5%99%A8"><span class="toc-text">DSP 配置外部存储器</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AE%9A%E6%97%B6%E5%99%A8%E7%BB%99%E5%87%BA-ppt-%E4%B8%AD%E5%8E%9F%E7%90%86%E5%9B%BE%E5%92%8C%E5%AF%84%E5%AD%98%E5%99%A8%E5%80%BC%E8%AE%A1%E7%AE%97%E4%B8%AD%E6%96%AD%E9%A2%91%E7%8E%87%E5%85%AC%E5%BC%8F%E4%B8%8D%E4%BC%9A%E7%BB%99%E5%87%BA-%E6%9C%80%E5%A5%BD%E7%90%86%E8%A7%A3-2.7.4-%E5%90%8C%E6%AD%A5%E4%B8%B2%E5%8F%A3%E7%9A%84%E5%B7%A5%E4%BD%9C%E6%9C%BA%E7%90%86"><span class="toc-text">定时器给出
-ppt 中原理图和寄存器值，计算中断频率（公式不会给出） 最好理解 2.7.4
-同步串口的工作机理</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%B8%89%E7%AB%A0"><span class="toc-text">第三章</span></a></li></ol></li></ol></div></div></div></div></main><footer id="footer" style="background-image: url('https://raw.githubusercontent.com/Center-cr/picture/main/202307091559166.png')"><div id="footer-wrap"></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/pluginsSrc/@fancyapps/ui/dist/fancybox/fancybox.umd.js"></script><script src="/pluginsSrc/instant.page/instantpage.js" type="module"></script><div class="js-pjax"><script>function loadGitalk () {
+<h4 id="重复指令-RPT"><a href="#重复指令-RPT" class="headerlink" title="重复指令 RPT"></a>重复指令 RPT</h4><h4 id="中断控制，能描述-2-5-4-节中中断响应流程（描述过程，不必画出来）；理-解-PIE-级中断系统三级结构"><a href="#中断控制，能描述-2-5-4-节中中断响应流程（描述过程，不必画出来）；理-解-PIE-级中断系统三级结构" class="headerlink" title="中断控制，能描述 2.5.4 节中中断响应流程（描述过程，不必画出来）；理 解 PIE 级中断系统三级结构"></a>中断控制，能描述 2.5.4 节中中断响应流程（描述过程，不必画出来）；理 解 PIE 级中断系统三级结构</h4><p><img src="https://raw.githubusercontent.com/Center-cr/picture/main/202307091610163.png" alt=" F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230612221602244.png"></p>
+<p><img src="https://raw.githubusercontent.com/Center-cr/picture/main/202307091610119.png" alt=" F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230612221635507.png"></p>
+<p><img src="https://raw.githubusercontent.com/Center-cr/picture/main/202307091610318.png" alt=" F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230612222127689.png"></p>
+<h4 id="DSP-配置外部存储器"><a href="#DSP-配置外部存储器" class="headerlink" title="DSP 配置外部存储器"></a>DSP 配置外部存储器</h4><p><img src="https://raw.githubusercontent.com/Center-cr/picture/main/202307091610816.png" alt=" F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230612154759336.png"></p>
+<p><img src="https://raw.githubusercontent.com/Center-cr/picture/main/202307091618075.png" alt=" F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230612222452487.png"></p>
+<p><img src="https://raw.githubusercontent.com/Center-cr/picture/main/202307091610495.png" alt=" F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230612222821373.png"></p>
+<p><img src="https://raw.githubusercontent.com/Center-cr/picture/main/202307091556126.png" alt=" F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230612155658161.png"></p>
+<h4 id="定时器给出-ppt-中原理图和寄存器值，计算中断频率（公式不会给出）-最好理解-2-7-4-同步串口的工作机理"><a href="#定时器给出-ppt-中原理图和寄存器值，计算中断频率（公式不会给出）-最好理解-2-7-4-同步串口的工作机理" class="headerlink" title="定时器给出 ppt 中原理图和寄存器值，计算中断频率（公式不会给出） 最好理解 2.7.4 同步串口的工作机理"></a>定时器给出 ppt 中原理图和寄存器值，计算中断频率（公式不会给出） 最好理解 2.7.4 同步串口的工作机理</h4><h3 id="第三章"><a href="#第三章" class="headerlink" title="第三章"></a>第三章</h3><p><img src="https://raw.githubusercontent.com/Center-cr/picture/main/202307091556498.png" alt=" F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230613144958255.png"></p>
+<p><img src="https://raw.githubusercontent.com/Center-cr/picture/main/202307091556076.png" alt=" F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230613145359926.png"></p>
+<p><img src="https://raw.githubusercontent.com/Center-cr/picture/main/202307091556038.png" alt=" F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230613144541608.png"></p>
+<p><img src="https://raw.githubusercontent.com/Center-cr/picture/main/202307091556386.png" alt=" F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230613145511050.png"></p>
+<p><img src="https://raw.githubusercontent.com/Center-cr/picture/main/202307091556251.png" alt=" F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230613145537076.png"></p>
+<p><img src="https://raw.githubusercontent.com/Center-cr/picture/main/202307091556565.png" alt=" F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230613150628651.png"></p>
+<p><img src="https://raw.githubusercontent.com/Center-cr/picture/main/202307091556706.png" alt=" F/TYOPORA_Note/专业课/DSP应用技术/relative/image-20230613150720024.png"></p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="http://example.com">Center-cr</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="http://example.com/2023/07/01/%E4%B8%93%E4%B8%9A%E8%AF%BE/DSP/">http://example.com/2023/07/01/%E4%B8%93%E4%B8%9A%E8%AF%BE/DSP/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://example.com" target="_blank">Center-cr's Blog</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/DSP%E5%BA%94%E7%94%A8/">DSP应用</a></div><div class="post_share"><div class="social-share" data-image="https://raw.githubusercontent.com/Center-cr/picture/main/202307091559166.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="/pluginsSrc/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="/pluginsSrc/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2023/07/01/hello-world/" title="hexo快速上手"><img class="cover" src="https://raw.githubusercontent.com/Center-cr/picture/main/202307091705540.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">hexo快速上手</div></div></a></div><div class="next-post pull-right"><a href="/2023/07/01/%E4%B8%93%E4%B8%9A%E8%AF%BE/%E5%A4%A9%E7%BA%BF%E4%B8%8E%E7%94%B5%E6%B3%A2%E4%BC%A0%E6%92%AD/" title="天线与电波传播-总结"><img class="cover" src="https://raw.githubusercontent.com/Center-cr/picture/main/202307091549837.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">天线与电波传播-总结</div></div></a></div></nav><hr class="custom-hr"/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div id="gitalk-container"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#ppt%E9%87%8D%E7%82%B9"><span class="toc-text">ppt重点</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2"><span class="toc-text">2</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4"><span class="toc-text">4</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BD%9C%E4%B8%9A"><span class="toc-text">作业</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BD%9C%E4%B8%9A%E4%BA%8C-%E5%AE%9A%E7%82%B9%E6%B5%AE%E7%82%B9%E3%80%81%E5%8D%95%E7%B2%BE%E5%BA%A6"><span class="toc-text">作业二-定点浮点、单精度</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BD%9C%E4%B8%9A%E4%B8%89-PIE-ePWM"><span class="toc-text">作业三-PIE&#x2F;ePWM</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BD%9C%E4%B8%9A%E5%9B%9B-XINTF"><span class="toc-text">作业四-XINTF</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BD%9C%E4%B8%9A%E4%BA%94-ePWM"><span class="toc-text">作业五-ePWM</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A4%A7%E7%BA%B2"><span class="toc-text">大纲</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E7%AB%A0"><span class="toc-text">第一章</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AE%9E%E6%97%B6%E6%80%A7%E4%B8%A4%E5%B1%82%E5%90%AB%E4%B9%89"><span class="toc-text">实时性两层含义</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%AE%A1%E7%AE%97%E5%AE%9E%E6%97%B6%E5%A4%84%E7%90%86%E6%9C%80%E4%BD%8E%E9%80%9F%E5%BA%A6"><span class="toc-text">计算实时处理最低速度</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%B3%BB%E7%BB%9F%E6%A1%86%E5%9B%BE"><span class="toc-text">系统框图</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E6%B5%81%E5%A4%84%E7%90%86%E5%92%8C%E6%95%B0%E6%8D%AE%E5%9D%97%E5%A4%84%E7%90%86"><span class="toc-text">数据流处理和数据块处理</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%88%86%E7%B1%BB"><span class="toc-text">分类</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AE%9A%E7%82%B9%E6%B5%AE%E7%82%B9%E8%BD%AC%E6%8D%A2"><span class="toc-text">定点浮点转换</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%93%88%E4%BD%9B%E7%BB%93%E6%9E%84%E5%92%8C%E5%86%AF%E8%AF%BA%E4%BC%8A%E6%9B%BC%E7%BB%93%E6%9E%84"><span class="toc-text">哈佛结构和冯诺伊曼结构</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B9%98%E5%8A%A0%E7%89%B9%E7%82%B9"><span class="toc-text">乘加特点</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%85%B6%E4%BB%96%E7%89%B9%E7%82%B9"><span class="toc-text">其他特点</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#MIPS%E3%80%81MOPS%E3%80%81MFLOPS%E3%80%81MACS-%E7%9A%84%E5%90%AB%E4%B9%89"><span class="toc-text">MIPS、MOPS、MFLOPS、MACS 的含义</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E7%AB%A0"><span class="toc-text">第二章</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%80%E8%88%AC-DSP-%E7%B3%BB%E7%BB%9F%E6%A1%86%E6%9E%B6%E5%9B%BE%E7%BB%84%E6%88%90%E9%83%A8%E5%88%86%EF%BC%9A"><span class="toc-text">一般 DSP 系统框架图组成部分：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%A0%B9%E6%8D%AE%E5%99%A8%E4%BB%B6%E6%89%8B%E5%86%8C%E9%85%8D%E7%BD%AE%E5%AF%84%E5%AD%98%E5%99%A8"><span class="toc-text">根据器件手册配置寄存器</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%80%BB%E7%BA%BF%E7%BB%93%E6%9E%84%E9%82%A3%E5%BC%A0%E5%9B%BE%E5%92%8C%E6%80%BB%E7%BB%93%E8%A1%A8%E6%A0%BC%EF%BC%8C%E8%83%BD%E6%AD%A3%E7%A1%AE%E6%A0%87%E6%B3%A8%E5%90%84%E6%9D%A1%E6%95%B0%E6%8D%AE%E5%9C%B0%E5%9D%80%E7%BA%BF"><span class="toc-text">总线结构那张图和总结表格，能正确标注各条数据地址线</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%87%8D%E5%A4%8D%E6%8C%87%E4%BB%A4-RPT"><span class="toc-text">重复指令 RPT</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%AD%E6%96%AD%E6%8E%A7%E5%88%B6%EF%BC%8C%E8%83%BD%E6%8F%8F%E8%BF%B0-2-5-4-%E8%8A%82%E4%B8%AD%E4%B8%AD%E6%96%AD%E5%93%8D%E5%BA%94%E6%B5%81%E7%A8%8B%EF%BC%88%E6%8F%8F%E8%BF%B0%E8%BF%87%E7%A8%8B%EF%BC%8C%E4%B8%8D%E5%BF%85%E7%94%BB%E5%87%BA%E6%9D%A5%EF%BC%89%EF%BC%9B%E7%90%86-%E8%A7%A3-PIE-%E7%BA%A7%E4%B8%AD%E6%96%AD%E7%B3%BB%E7%BB%9F%E4%B8%89%E7%BA%A7%E7%BB%93%E6%9E%84"><span class="toc-text">中断控制，能描述 2.5.4 节中中断响应流程（描述过程，不必画出来）；理 解 PIE 级中断系统三级结构</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#DSP-%E9%85%8D%E7%BD%AE%E5%A4%96%E9%83%A8%E5%AD%98%E5%82%A8%E5%99%A8"><span class="toc-text">DSP 配置外部存储器</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AE%9A%E6%97%B6%E5%99%A8%E7%BB%99%E5%87%BA-ppt-%E4%B8%AD%E5%8E%9F%E7%90%86%E5%9B%BE%E5%92%8C%E5%AF%84%E5%AD%98%E5%99%A8%E5%80%BC%EF%BC%8C%E8%AE%A1%E7%AE%97%E4%B8%AD%E6%96%AD%E9%A2%91%E7%8E%87%EF%BC%88%E5%85%AC%E5%BC%8F%E4%B8%8D%E4%BC%9A%E7%BB%99%E5%87%BA%EF%BC%89-%E6%9C%80%E5%A5%BD%E7%90%86%E8%A7%A3-2-7-4-%E5%90%8C%E6%AD%A5%E4%B8%B2%E5%8F%A3%E7%9A%84%E5%B7%A5%E4%BD%9C%E6%9C%BA%E7%90%86"><span class="toc-text">定时器给出 ppt 中原理图和寄存器值，计算中断频率（公式不会给出） 最好理解 2.7.4 同步串口的工作机理</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%B8%89%E7%AB%A0"><span class="toc-text">第三章</span></a></li></ol></li></ol></div></div></div></div></main><footer id="footer" style="background-image: url('https://raw.githubusercontent.com/Center-cr/picture/main/202307091559166.png')"><div id="footer-wrap"></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/pluginsSrc/@fancyapps/ui/dist/fancybox/fancybox.umd.js"></script><script src="/pluginsSrc/instant.page/instantpage.js" type="module"></script><div class="js-pjax"><script>function loadGitalk () {
   function initGitalk () {
     var gitalk = new Gitalk(Object.assign({
       clientID: '0b46f2c6ec014d6d94b7',
