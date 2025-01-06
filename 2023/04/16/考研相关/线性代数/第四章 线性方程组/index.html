@@ -1,9 +1,9 @@
-<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>第四章 线性方程组 | Center-cr's Blog</title><meta name="author" content="Center-cr"><meta name="copyright" content="Center-cr"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="ffffff"><meta name="description" content="第四章 线性方程组 (flowus.cn) 知识点 齐次线性方程组   image-20230818165117997  齐次线性方程组的解   image-20230818165304097    image-20230818165328600  非齐次方程组   image-20230818165639651    image-202308181">
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>第四章 线性方程组 | Center-cr's Blog</title><meta name="author" content="Center-cr"><meta name="copyright" content="Center-cr"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="ffffff"><meta name="description" content="第四章 线性方程组 (flowus.cn) 知识点齐次线性方程组 齐次线性方程组的解  非齐次方程组  题型解齐次线性方程组    关于 n-r 的由来的思考，如果方程组系数矩阵秩为 r&#x3D;n,那么化为阶梯矩阵之后可以快速推得每个未知数都应该取 0 ，方程只有 0 解，如果方程组系数矩阵 A 的秩 r &lt; n，那么方程组的未知数取值显然可以是多样的，不一定全是 0 ，为了求解这样的方">
 <meta property="og:type" content="article">
 <meta property="og:title" content="第四章 线性方程组">
 <meta property="og:url" content="http://example.com/2023/04/16/%E8%80%83%E7%A0%94%E7%9B%B8%E5%85%B3/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/%E7%AC%AC%E5%9B%9B%E7%AB%A0%20%E7%BA%BF%E6%80%A7%E6%96%B9%E7%A8%8B%E7%BB%84/index.html">
 <meta property="og:site_name" content="Center-cr&#39;s Blog">
-<meta property="og:description" content="第四章 线性方程组 (flowus.cn) 知识点 齐次线性方程组   image-20230818165117997  齐次线性方程组的解   image-20230818165304097    image-20230818165328600  非齐次方程组   image-20230818165639651    image-202308181">
+<meta property="og:description" content="第四章 线性方程组 (flowus.cn) 知识点齐次线性方程组 齐次线性方程组的解  非齐次方程组  题型解齐次线性方程组    关于 n-r 的由来的思考，如果方程组系数矩阵秩为 r&#x3D;n,那么化为阶梯矩阵之后可以快速推得每个未知数都应该取 0 ，方程只有 0 解，如果方程组系数矩阵 A 的秩 r &lt; n，那么方程组的未知数取值显然可以是多样的，不一定全是 0 ，为了求解这样的方">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://raw.githubusercontent.com/Center-cr/picture/main/202308141650072.png">
 <meta property="article:published_time" content="2023-04-15T16:00:00.000Z">
@@ -181,234 +181,45 @@
       }
     }
     detectApple()
-    })(window)</script><link rel="stylesheet" href="/css/custom.css"  media="defer" onload="this.media='all'"><meta name="generator" content="Hexo 6.3.0"></head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/icon.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">97</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">45</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">15</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于我</span></a></div><div class="menus_item"><a class="site-page" href="/tools_online/"><i class="fa-fw fas fa-cloud"></i><span> 在线工具</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://raw.githubusercontent.com/Center-cr/picture/main/202308141650072.png')"><nav id="nav"><span id="blog-info"><a href="/" title="Center-cr's Blog"><span class="site-name">Center-cr's Blog</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于我</span></a></div><div class="menus_item"><a class="site-page" href="/tools_online/"><i class="fa-fw fas fa-cloud"></i><span> 在线工具</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">第四章 线性方程组</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2023-04-15T16:00:00.000Z" title="发表于 2023-04-16 00:00:00">2023-04-16</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2023-04-15T16:00:00.000Z" title="更新于 2023-04-16 00:00:00">2023-04-16</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">447</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>1分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="第四章 线性方程组"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><p><a
-target="_blank" rel="noopener" href="https://flowus.cn/66f4a77a-5e54-48ec-bc61-e75cf746ec83">第四章
-线性方程组 (flowus.cn)</a></p>
-<h3 id="知识点">知识点</h3>
-<h4 id="齐次线性方程组">齐次线性方程组</h4>
-<figure>
-<img
-src="https://raw.githubusercontent.com/Center-cr/picture/main/202308181652224.png"
-alt="image-20230818165117997" />
-<figcaption aria-hidden="true">image-20230818165117997</figcaption>
-</figure>
-<h4 id="齐次线性方程组的解">齐次线性方程组的解</h4>
-<figure>
-<img
-src="https://raw.githubusercontent.com/Center-cr/picture/main/202308181653244.png"
-alt="image-20230818165304097" />
-<figcaption aria-hidden="true">image-20230818165304097</figcaption>
-</figure>
-<figure>
-<img
-src="https://raw.githubusercontent.com/Center-cr/picture/main/202308181653721.png"
-alt="image-20230818165328600" />
-<figcaption aria-hidden="true">image-20230818165328600</figcaption>
-</figure>
-<h4 id="非齐次方程组">非齐次方程组</h4>
-<figure>
-<img
-src="https://raw.githubusercontent.com/Center-cr/picture/main/202308181656853.png"
-alt="image-20230818165639651" />
-<figcaption aria-hidden="true">image-20230818165639651</figcaption>
-</figure>
-<figure>
-<img
-src="https://raw.githubusercontent.com/Center-cr/picture/main/202308181657981.png"
-alt="image-20230818165703838" />
-<figcaption aria-hidden="true">image-20230818165703838</figcaption>
-</figure>
-<h3 id="题型">题型</h3>
-<h4 id="解齐次线性方程组">解齐次线性方程组</h4>
-<figure>
-<img
-src="https://raw.githubusercontent.com/Center-cr/picture/main/202308181723460.png"
-alt="image-20230818172309339" />
-<figcaption aria-hidden="true">image-20230818172309339</figcaption>
-</figure>
-<figure>
-<img
-src="https://raw.githubusercontent.com/Center-cr/picture/main/202308181724709.png"
-alt="image-20230818172428574" />
-<figcaption aria-hidden="true">image-20230818172428574</figcaption>
-</figure>
-<figure>
-<img
-src="https://raw.githubusercontent.com/Center-cr/picture/main/202308181726479.png"
-alt="image-20230818172610097" />
-<figcaption aria-hidden="true">image-20230818172610097</figcaption>
-</figure>
-<figure>
-<img
-src="https://raw.githubusercontent.com/Center-cr/picture/main/202308181726912.png"
-alt="image-20230818172643712" />
-<figcaption aria-hidden="true">image-20230818172643712</figcaption>
-</figure>
-<p>关于 n-r 的由来的思考，如果方程组系数矩阵秩为
-r=n,那么化为阶梯矩阵之后可以快速推得每个未知数都应该取 0 ，方程只有 0
-解，如果方程组系数矩阵 A 的秩 r &lt;
-n，那么方程组的未知数取值显然可以是多样的，不一定全是 0
-，为了求解这样的方程，我们假定了 n-r 个
-自由未知变量，实际上是把这些未知变量变为常数 ，变成了
-r阶非齐次线性方程组（且系数矩阵秩为 r），在 n-r
-个自由变量当作常数的情况下，我们得到了唯一解，这时把自由变量当作未知数，那么会得到
-n-r 个基础解系向量。</p>
-<h4 id="非齐次线性方程组">非齐次线性方程组</h4>
-<p>1、解非齐次线性方程组 - 增广矩阵</p>
-<figure>
-<img
-src="https://raw.githubusercontent.com/Center-cr/picture/main/202308181736960.png"
-alt="image-20230818173630872" />
-<figcaption aria-hidden="true">image-20230818173630872</figcaption>
-</figure>
-<figure>
-<img
-src="https://raw.githubusercontent.com/Center-cr/picture/main/202308181737883.png"
-alt="image-20230818173717784" />
-<figcaption aria-hidden="true">image-20230818173717784</figcaption>
-</figure>
+    })(window)</script><link rel="stylesheet" href="/css/custom.css"  media="defer" onload="this.media='all'"><meta name="generator" content="Hexo 6.3.0"></head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/icon.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">98</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">46</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">15</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于我</span></a></div><div class="menus_item"><a class="site-page" href="/tools_online/"><i class="fa-fw fas fa-cloud"></i><span> 在线工具</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://raw.githubusercontent.com/Center-cr/picture/main/202308141650072.png')"><nav id="nav"><span id="blog-info"><a href="/" title="Center-cr's Blog"><span class="site-name">Center-cr's Blog</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于我</span></a></div><div class="menus_item"><a class="site-page" href="/tools_online/"><i class="fa-fw fas fa-cloud"></i><span> 在线工具</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">第四章 线性方程组</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2023-04-15T16:00:00.000Z" title="发表于 2023-04-16 00:00:00">2023-04-16</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2023-04-15T16:00:00.000Z" title="更新于 2023-04-16 00:00:00">2023-04-16</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">382</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>1分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="第四章 线性方程组"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><p><a target="_blank" rel="noopener" href="https://flowus.cn/66f4a77a-5e54-48ec-bc61-e75cf746ec83">第四章 线性方程组 (flowus.cn)</a></p>
+<h3 id="知识点"><a href="#知识点" class="headerlink" title="知识点"></a>知识点</h3><h4 id="齐次线性方程组"><a href="#齐次线性方程组" class="headerlink" title="齐次线性方程组"></a>齐次线性方程组</h4><p><img src="https://raw.githubusercontent.com/Center-cr/picture/main/202308181652224.png" alt="image-20230818165117997"></p>
+<h4 id="齐次线性方程组的解"><a href="#齐次线性方程组的解" class="headerlink" title="齐次线性方程组的解"></a>齐次线性方程组的解</h4><p><img src="https://raw.githubusercontent.com/Center-cr/picture/main/202308181653244.png" alt="image-20230818165304097"></p>
+<p><img src="https://raw.githubusercontent.com/Center-cr/picture/main/202308181653721.png" alt="image-20230818165328600"></p>
+<h4 id="非齐次方程组"><a href="#非齐次方程组" class="headerlink" title="非齐次方程组"></a>非齐次方程组</h4><p><img src="https://raw.githubusercontent.com/Center-cr/picture/main/202308181656853.png" alt="image-20230818165639651"></p>
+<p><img src="https://raw.githubusercontent.com/Center-cr/picture/main/202308181657981.png" alt="image-20230818165703838"></p>
+<h3 id="题型"><a href="#题型" class="headerlink" title="题型"></a>题型</h3><h4 id="解齐次线性方程组"><a href="#解齐次线性方程组" class="headerlink" title="解齐次线性方程组"></a>解齐次线性方程组</h4><p><img src="https://raw.githubusercontent.com/Center-cr/picture/main/202308181723460.png" alt="image-20230818172309339"></p>
+<p><img src="https://raw.githubusercontent.com/Center-cr/picture/main/202308181724709.png" alt="image-20230818172428574"></p>
+<p><img src="https://raw.githubusercontent.com/Center-cr/picture/main/202308181726479.png" alt="image-20230818172610097"></p>
+<p><img src="https://raw.githubusercontent.com/Center-cr/picture/main/202308181726912.png" alt="image-20230818172643712"></p>
+<p>关于 n-r 的由来的思考，如果方程组系数矩阵秩为 r&#x3D;n,那么化为阶梯矩阵之后可以快速推得每个未知数都应该取 0 ，方程只有 0 解，如果方程组系数矩阵 A 的秩 r &lt; n，那么方程组的未知数取值显然可以是多样的，不一定全是 0 ，为了求解这样的方程，我们假定了 n-r 个 自由未知变量，实际上是把这些未知变量变为常数 ，变成了 r阶非齐次线性方程组（且系数矩阵秩为 r），在 n-r 个自由变量当作常数的情况下，我们得到了唯一解，这时把自由变量当作未知数，那么会得到 n-r 个基础解系向量。</p>
+<h4 id="非齐次线性方程组"><a href="#非齐次线性方程组" class="headerlink" title="非齐次线性方程组"></a>非齐次线性方程组</h4><p>1、解非齐次线性方程组 - 增广矩阵</p>
+<p><img src="https://raw.githubusercontent.com/Center-cr/picture/main/202308181736960.png" alt="image-20230818173630872"></p>
+<p><img src="https://raw.githubusercontent.com/Center-cr/picture/main/202308181737883.png" alt="image-20230818173717784"></p>
 <p>2、非齐次线性方程组是否有解 增广矩阵的秩是否等于系数矩阵的秩</p>
-<figure>
-<img
-src="https://raw.githubusercontent.com/Center-cr/picture/main/202308181739187.png"
-alt="image-20230818173933108" />
-<figcaption aria-hidden="true">image-20230818173933108</figcaption>
-</figure>
-<figure>
-<img
-src="https://raw.githubusercontent.com/Center-cr/picture/main/202308181740278.png"
-alt="image-20230818174014115" />
-<figcaption aria-hidden="true">image-20230818174014115</figcaption>
-</figure>
-<h4 id="方程组是否有解">方程组是否有解</h4>
-<figure>
-<img
-src="https://raw.githubusercontent.com/Center-cr/picture/main/202308181743710.png"
-alt="image-20230818174342050" />
-<figcaption aria-hidden="true">image-20230818174342050</figcaption>
-</figure>
-<figure>
-<img
-src="https://raw.githubusercontent.com/Center-cr/picture/main/202308181744577.png"
-alt="image-20230818174405403" />
-<figcaption aria-hidden="true">image-20230818174405403</figcaption>
-</figure>
-<h4 id="解的结构">解的结构</h4>
-<figure>
-<img
-src="https://raw.githubusercontent.com/Center-cr/picture/main/202308181745760.png"
-alt="image-20230818174512280" />
-<figcaption aria-hidden="true">image-20230818174512280</figcaption>
-</figure>
-<figure>
-<img
-src="https://raw.githubusercontent.com/Center-cr/picture/main/202308181746357.png"
-alt="image-20230818174628062" />
-<figcaption aria-hidden="true">image-20230818174628062</figcaption>
-</figure>
-<figure>
-<img
-src="https://raw.githubusercontent.com/Center-cr/picture/main/202308181748860.png"
-alt="image-20230818174641818" />
-<figcaption aria-hidden="true">image-20230818174641818</figcaption>
-</figure>
-<h4 id="齐次方程组基础解系">齐次方程组基础解系</h4>
-<figure>
-<img
-src="https://raw.githubusercontent.com/Center-cr/picture/main/202308181750336.png"
-alt="image-20230818175021923" />
-<figcaption aria-hidden="true">image-20230818175021923</figcaption>
-</figure>
+<p><img src="https://raw.githubusercontent.com/Center-cr/picture/main/202308181739187.png" alt="image-20230818173933108"></p>
+<p><img src="https://raw.githubusercontent.com/Center-cr/picture/main/202308181740278.png" alt="image-20230818174014115"></p>
+<h4 id="方程组是否有解"><a href="#方程组是否有解" class="headerlink" title="方程组是否有解"></a>方程组是否有解</h4><p><img src="https://raw.githubusercontent.com/Center-cr/picture/main/202308181743710.png" alt="image-20230818174342050"></p>
+<p><img src="https://raw.githubusercontent.com/Center-cr/picture/main/202308181744577.png" alt="image-20230818174405403"></p>
+<h4 id="解的结构"><a href="#解的结构" class="headerlink" title="解的结构"></a>解的结构</h4><p><img src="https://raw.githubusercontent.com/Center-cr/picture/main/202308181745760.png" alt="image-20230818174512280"></p>
+<p><img src="https://raw.githubusercontent.com/Center-cr/picture/main/202308181746357.png" alt="image-20230818174628062"></p>
+<p><img src="https://raw.githubusercontent.com/Center-cr/picture/main/202308181748860.png" alt="image-20230818174641818"></p>
+<h4 id="齐次方程组基础解系"><a href="#齐次方程组基础解系" class="headerlink" title="齐次方程组基础解系"></a>齐次方程组基础解系</h4><p><img src="https://raw.githubusercontent.com/Center-cr/picture/main/202308181750336.png" alt="image-20230818175021923"></p>
 <p>1、与伴随矩阵关系</p>
-<figure>
-<img
-src="https://raw.githubusercontent.com/Center-cr/picture/main/202308181752479.png"
-alt="image-20230818175203241" />
-<figcaption aria-hidden="true">image-20230818175203241</figcaption>
-</figure>
+<p><img src="https://raw.githubusercontent.com/Center-cr/picture/main/202308181752479.png" alt="image-20230818175203241"></p>
 <p>2、基础解系向量右乘系数矩阵，若秩不变，得到新的基础解系</p>
-<figure>
-<img
-src="https://raw.githubusercontent.com/Center-cr/picture/main/202308181754050.png"
-alt="image-20230818175428828" />
-<figcaption aria-hidden="true">image-20230818175428828</figcaption>
-</figure>
-<h4
-id="方程组系数矩阵列向量和解的关系">方程组系数矩阵列向量和解的关系</h4>
-<figure>
-<img
-src="https://raw.githubusercontent.com/Center-cr/picture/main/202308181757157.png"
-alt="image-20230818175747661" />
-<figcaption aria-hidden="true">image-20230818175747661</figcaption>
-</figure>
-<figure>
-<img
-src="https://raw.githubusercontent.com/Center-cr/picture/main/202308181802628.png"
-alt="image-20230818180226466" />
-<figcaption aria-hidden="true">image-20230818180226466</figcaption>
-</figure>
-<figure>
-<img
-src="https://raw.githubusercontent.com/Center-cr/picture/main/202308181803644.png"
-alt="image-20230818180341239" />
-<figcaption aria-hidden="true">image-20230818180341239</figcaption>
-</figure>
-<h4 id="两个方程组公共解">两个方程组公共解</h4>
-<figure>
-<img
-src="https://raw.githubusercontent.com/Center-cr/picture/main/202308181804041.png"
-alt="image-20230818180441458" />
-<figcaption aria-hidden="true">image-20230818180441458</figcaption>
-</figure>
-<figure>
-<img
-src="https://raw.githubusercontent.com/Center-cr/picture/main/202308181805566.png"
-alt="image-20230818180531444" />
-<figcaption aria-hidden="true">image-20230818180531444</figcaption>
-</figure>
-<figure>
-<img
-src="https://raw.githubusercontent.com/Center-cr/picture/main/202308181806424.png"
-alt="image-20230818180544767" />
-<figcaption aria-hidden="true">image-20230818180544767</figcaption>
-</figure>
-<figure>
-<img
-src="https://raw.githubusercontent.com/Center-cr/picture/main/202308181806167.png"
-alt="image-20230818180640695" />
-<figcaption aria-hidden="true">image-20230818180640695</figcaption>
-</figure>
-<figure>
-<img
-src="https://raw.githubusercontent.com/Center-cr/picture/main/202308181807312.png"
-alt="image-20230818180722087" />
-<figcaption aria-hidden="true">image-20230818180722087</figcaption>
-</figure>
-<h4 id="同解方程组">同解方程组</h4>
-<figure>
-<img
-src="https://raw.githubusercontent.com/Center-cr/picture/main/202308181810271.png"
-alt="image-20230818181019958" />
-<figcaption aria-hidden="true">image-20230818181019958</figcaption>
-</figure>
-<figure>
-<img
-src="https://raw.githubusercontent.com/Center-cr/picture/main/202308181811010.png"
-alt="image-20230818181106728" />
-<figcaption aria-hidden="true">image-20230818181106728</figcaption>
-</figure>
-<figure>
-<img
-src="https://raw.githubusercontent.com/Center-cr/picture/main/202308181811036.png"
-alt="image-20230818181127973" />
-<figcaption aria-hidden="true">image-20230818181127973</figcaption>
-</figure>
-<figure>
-<img
-src="https://raw.githubusercontent.com/Center-cr/picture/main/202308181812682.png"
-alt="image-20230818181204421" />
-<figcaption aria-hidden="true">image-20230818181204421</figcaption>
-</figure>
+<p><img src="https://raw.githubusercontent.com/Center-cr/picture/main/202308181754050.png" alt="image-20230818175428828"></p>
+<h4 id="方程组系数矩阵列向量和解的关系"><a href="#方程组系数矩阵列向量和解的关系" class="headerlink" title="方程组系数矩阵列向量和解的关系"></a>方程组系数矩阵列向量和解的关系</h4><p><img src="https://raw.githubusercontent.com/Center-cr/picture/main/202308181757157.png" alt="image-20230818175747661"></p>
+<p><img src="https://raw.githubusercontent.com/Center-cr/picture/main/202308181802628.png" alt="image-20230818180226466"></p>
+<p><img src="https://raw.githubusercontent.com/Center-cr/picture/main/202308181803644.png" alt="image-20230818180341239"></p>
+<h4 id="两个方程组公共解"><a href="#两个方程组公共解" class="headerlink" title="两个方程组公共解"></a>两个方程组公共解</h4><p><img src="https://raw.githubusercontent.com/Center-cr/picture/main/202308181804041.png" alt="image-20230818180441458"></p>
+<p><img src="https://raw.githubusercontent.com/Center-cr/picture/main/202308181805566.png" alt="image-20230818180531444"></p>
+<p><img src="https://raw.githubusercontent.com/Center-cr/picture/main/202308181806424.png" alt="image-20230818180544767"></p>
+<p><img src="https://raw.githubusercontent.com/Center-cr/picture/main/202308181806167.png" alt="image-20230818180640695"></p>
+<p><img src="https://raw.githubusercontent.com/Center-cr/picture/main/202308181807312.png" alt="image-20230818180722087"></p>
+<h4 id="同解方程组"><a href="#同解方程组" class="headerlink" title="同解方程组"></a>同解方程组</h4><p><img src="https://raw.githubusercontent.com/Center-cr/picture/main/202308181810271.png" alt="image-20230818181019958"></p>
+<p><img src="https://raw.githubusercontent.com/Center-cr/picture/main/202308181811010.png" alt="image-20230818181106728"></p>
+<p><img src="https://raw.githubusercontent.com/Center-cr/picture/main/202308181811036.png" alt="image-20230818181127973"></p>
+<p><img src="https://raw.githubusercontent.com/Center-cr/picture/main/202308181812682.png" alt="image-20230818181204421"></p>
 </article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="http://example.com">Center-cr</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="http://example.com/2023/04/16/%E8%80%83%E7%A0%94%E7%9B%B8%E5%85%B3/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/%E7%AC%AC%E5%9B%9B%E7%AB%A0%20%E7%BA%BF%E6%80%A7%E6%96%B9%E7%A8%8B%E7%BB%84/">http://example.com/2023/04/16/%E8%80%83%E7%A0%94%E7%9B%B8%E5%85%B3/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/%E7%AC%AC%E5%9B%9B%E7%AB%A0%20%E7%BA%BF%E6%80%A7%E6%96%B9%E7%A8%8B%E7%BB%84/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://example.com" target="_blank">Center-cr's Blog</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/">线性代数</a></div><div class="post_share"><div class="social-share" data-image="https://raw.githubusercontent.com/Center-cr/picture/main/202308141650072.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="/pluginsSrc/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="/pluginsSrc/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2023/04/16/%E8%80%83%E7%A0%94%E7%9B%B8%E5%85%B3/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/%E7%AC%AC%E5%85%AD%E7%AB%A0%20%E4%BA%8C%E6%AC%A1%E5%9E%8B/" title="第六章 二次型"><img class="cover" src="https://raw.githubusercontent.com/Center-cr/picture/main/202308141650072.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">第六章 二次型</div></div></a></div><div class="next-post pull-right"><a href="/2023/04/16/%E8%80%83%E7%A0%94%E7%9B%B8%E5%85%B3/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/%E7%BA%BF%E4%BB%A3%20%E9%94%99%E9%A2%98%E7%AC%94%E8%AE%B0/" title=""><img class="cover" src="https://raw.githubusercontent.com/Center-cr/picture/main/202308141650072.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info"></div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><div><a href="/2023/04/16/%E8%80%83%E7%A0%94%E7%9B%B8%E5%85%B3/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/%E7%AC%AC%E4%B8%80%E7%AB%A0%20%E8%A1%8C%E5%88%97%E5%BC%8F/" title="第一章 行列式"><img class="cover" src="https://raw.githubusercontent.com/Center-cr/picture/main/202308141650072.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-04-16</div><div class="title">第一章 行列式</div></div></a></div><div><a href="/2023/04/16/%E8%80%83%E7%A0%94%E7%9B%B8%E5%85%B3/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/%E7%AC%AC%E4%B8%89%E7%AB%A0%20%E5%90%91%E9%87%8F%E7%BB%84/" title="第三章 向量组"><img class="cover" src="https://raw.githubusercontent.com/Center-cr/picture/main/202308141650072.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-04-16</div><div class="title">第三章 向量组</div></div></a></div><div><a href="/2023/04/16/%E8%80%83%E7%A0%94%E7%9B%B8%E5%85%B3/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/%E7%AC%AC%E4%BA%8C%E7%AB%A0%20%E7%9F%A9%E9%98%B5/" title="第二章 矩阵"><img class="cover" src="https://raw.githubusercontent.com/Center-cr/picture/main/202308141650072.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-04-16</div><div class="title">第二章 矩阵</div></div></a></div><div><a href="/2023/04/16/%E8%80%83%E7%A0%94%E7%9B%B8%E5%85%B3/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/%E7%AC%AC%E4%BA%94%E7%AB%A0%20%E7%89%B9%E5%BE%81%E5%80%BC%E4%B8%8E%E7%89%B9%E5%BE%81%E5%90%91%E9%87%8F/" title="第五章 特征值与特征向量"><img class="cover" src="https://raw.githubusercontent.com/Center-cr/picture/main/202308141650072.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-04-16</div><div class="title">第五章 特征值与特征向量</div></div></a></div><div><a href="/2023/04/16/%E8%80%83%E7%A0%94%E7%9B%B8%E5%85%B3/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/%E7%AC%AC%E5%85%AD%E7%AB%A0%20%E4%BA%8C%E6%AC%A1%E5%9E%8B/" title="第六章 二次型"><img class="cover" src="https://raw.githubusercontent.com/Center-cr/picture/main/202308141650072.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-04-16</div><div class="title">第六章 二次型</div></div></a></div><div><a href="/2023/04/16/%E8%80%83%E7%A0%94%E7%9B%B8%E5%85%B3/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/%E7%BA%BF%E4%BB%A3%20%E9%94%99%E9%A2%98%E7%AC%94%E8%AE%B0/" title=""><img class="cover" src="https://raw.githubusercontent.com/Center-cr/picture/main/202308141650072.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-04-16</div><div class="title"></div></div></a></div></div></div><hr class="custom-hr"/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div id="gitalk-container"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%9F%A5%E8%AF%86%E7%82%B9"><span class="toc-text">知识点</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%BD%90%E6%AC%A1%E7%BA%BF%E6%80%A7%E6%96%B9%E7%A8%8B%E7%BB%84"><span class="toc-text">齐次线性方程组</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%BD%90%E6%AC%A1%E7%BA%BF%E6%80%A7%E6%96%B9%E7%A8%8B%E7%BB%84%E7%9A%84%E8%A7%A3"><span class="toc-text">齐次线性方程组的解</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%9D%9E%E9%BD%90%E6%AC%A1%E6%96%B9%E7%A8%8B%E7%BB%84"><span class="toc-text">非齐次方程组</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A2%98%E5%9E%8B"><span class="toc-text">题型</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%A7%A3%E9%BD%90%E6%AC%A1%E7%BA%BF%E6%80%A7%E6%96%B9%E7%A8%8B%E7%BB%84"><span class="toc-text">解齐次线性方程组</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%9D%9E%E9%BD%90%E6%AC%A1%E7%BA%BF%E6%80%A7%E6%96%B9%E7%A8%8B%E7%BB%84"><span class="toc-text">非齐次线性方程组</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%96%B9%E7%A8%8B%E7%BB%84%E6%98%AF%E5%90%A6%E6%9C%89%E8%A7%A3"><span class="toc-text">方程组是否有解</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%A7%A3%E7%9A%84%E7%BB%93%E6%9E%84"><span class="toc-text">解的结构</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%BD%90%E6%AC%A1%E6%96%B9%E7%A8%8B%E7%BB%84%E5%9F%BA%E7%A1%80%E8%A7%A3%E7%B3%BB"><span class="toc-text">齐次方程组基础解系</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%96%B9%E7%A8%8B%E7%BB%84%E7%B3%BB%E6%95%B0%E7%9F%A9%E9%98%B5%E5%88%97%E5%90%91%E9%87%8F%E5%92%8C%E8%A7%A3%E7%9A%84%E5%85%B3%E7%B3%BB"><span class="toc-text">方程组系数矩阵列向量和解的关系</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%A4%E4%B8%AA%E6%96%B9%E7%A8%8B%E7%BB%84%E5%85%AC%E5%85%B1%E8%A7%A3"><span class="toc-text">两个方程组公共解</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%90%8C%E8%A7%A3%E6%96%B9%E7%A8%8B%E7%BB%84"><span class="toc-text">同解方程组</span></a></li></ol></li></ol></div></div></div></div></main><footer id="footer" style="background-image: url('https://raw.githubusercontent.com/Center-cr/picture/main/202308141650072.png')"><div id="footer-wrap"></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/pluginsSrc/@fancyapps/ui/dist/fancybox/fancybox.umd.js"></script><script src="/pluginsSrc/instant.page/instantpage.js" type="module"></script><div class="js-pjax"><script>function loadGitalk () {
   function initGitalk () {
     var gitalk = new Gitalk(Object.assign({
