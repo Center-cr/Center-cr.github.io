@@ -1,9 +1,9 @@
-<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>MATLAB乱码问题解决 | Center-cr's Blog</title><meta name="author" content="Center-cr"><meta name="copyright" content="Center-cr"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="ffffff"><meta name="description" content="1 问题描述MATLAB R2019a 打开他人 .m 文件在MATLAB编辑器中文全为乱码，在安装目录 bin 文件夹下更改 lccdata.xml 后无乱码，但是输出绘图和命令行仍是乱码。  2 解决方案2.1 针对在 MATLAB 编辑器打开出现乱码分析推测为编码方式出现问题，实际上也是编码方式的问题 1、查看现在编码方式 在命令行输入： 1feature(&amp;#x27;locale&amp;#x27">
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>MATLAB乱码问题解决 | Center-cr's Blog</title><meta name="author" content="Center-cr"><meta name="copyright" content="Center-cr"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="ffffff"><meta name="description" content="1 问题描述 MATLAB R2019a 打开他人 .m 文件在MATLAB编辑器中文全为乱码，在安装目录 bin 文件夹下更改 lccdata.xml 后无乱码，但是输出绘图和命令行仍是乱码。   image-20250106092211055  2 解决方案 2.1 针对在 MATLAB 编辑器打开出现乱码分析 推测为编码方式出现问题，实际上也是编码方式的问题 1、查看">
 <meta property="og:type" content="article">
 <meta property="og:title" content="MATLAB乱码问题解决">
 <meta property="og:url" content="http://example.com/2025/01/06/%E5%B0%8F%E6%8A%80%E5%B7%A7/MATLAB/MATLAB%E4%B9%B1%E7%A0%81%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/index.html">
 <meta property="og:site_name" content="Center-cr&#39;s Blog">
-<meta property="og:description" content="1 问题描述MATLAB R2019a 打开他人 .m 文件在MATLAB编辑器中文全为乱码，在安装目录 bin 文件夹下更改 lccdata.xml 后无乱码，但是输出绘图和命令行仍是乱码。  2 解决方案2.1 针对在 MATLAB 编辑器打开出现乱码分析推测为编码方式出现问题，实际上也是编码方式的问题 1、查看现在编码方式 在命令行输入： 1feature(&amp;#x27;locale&amp;#x27">
+<meta property="og:description" content="1 问题描述 MATLAB R2019a 打开他人 .m 文件在MATLAB编辑器中文全为乱码，在安装目录 bin 文件夹下更改 lccdata.xml 后无乱码，但是输出绘图和命令行仍是乱码。   image-20250106092211055  2 解决方案 2.1 针对在 MATLAB 编辑器打开出现乱码分析 推测为编码方式出现问题，实际上也是编码方式的问题 1、查看">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://raw.githubusercontent.com/Center-cr/picture/main/MATLAB2019a.png">
 <meta property="article:published_time" content="2025-01-05T16:00:00.000Z">
@@ -181,108 +181,238 @@
       }
     }
     detectApple()
-    })(window)</script><link rel="stylesheet" href="/css/custom.css"  media="defer" onload="this.media='all'"><meta name="generator" content="Hexo 6.3.0"></head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/icon.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">101</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">47</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">15</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于我</span></a></div><div class="menus_item"><a class="site-page" href="/tools_online/"><i class="fa-fw fas fa-cloud"></i><span> 在线工具</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://raw.githubusercontent.com/Center-cr/picture/main/MATLAB2019a.png')"><nav id="nav"><span id="blog-info"><a href="/" title="Center-cr's Blog"><span class="site-name">Center-cr's Blog</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于我</span></a></div><div class="menus_item"><a class="site-page" href="/tools_online/"><i class="fa-fw fas fa-cloud"></i><span> 在线工具</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">MATLAB乱码问题解决</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2025-01-05T16:00:00.000Z" title="发表于 2025-01-06 00:00:00">2025-01-06</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2025-01-05T16:00:00.000Z" title="更新于 2025-01-06 00:00:00">2025-01-06</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E5%B0%8F%E6%8A%80%E5%B7%A7/">小技巧</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">1.2k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>4分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="MATLAB乱码问题解决"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h2 id="1-问题描述"><a href="#1-问题描述" class="headerlink" title="1 问题描述"></a>1 问题描述</h2><p>MATLAB R2019a 打开他人 .m 文件在MATLAB编辑器中文全为乱码，在安装目录 bin 文件夹下更改 lccdata.xml 后无乱码，但是输出绘图和命令行仍是乱码。</p>
-<p><img src="https://raw.githubusercontent.com/Center-cr/picture/main/image-20250106092211055.png" alt="image-20250106092211055"></p>
-<h2 id="2-解决方案"><a href="#2-解决方案" class="headerlink" title="2 解决方案"></a>2 解决方案</h2><h3 id="2-1-针对在-MATLAB-编辑器打开出现乱码分析"><a href="#2-1-针对在-MATLAB-编辑器打开出现乱码分析" class="headerlink" title="2.1 针对在 MATLAB 编辑器打开出现乱码分析"></a>2.1 针对在 MATLAB 编辑器打开出现乱码分析</h3><p>推测为编码方式出现问题，实际上也是编码方式的问题</p>
+    })(window)</script><link rel="stylesheet" href="/css/custom.css"  media="defer" onload="this.media='all'"><meta name="generator" content="Hexo 6.3.0"></head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/icon.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">101</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">47</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">15</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于我</span></a></div><div class="menus_item"><a class="site-page" href="/tools_online/"><i class="fa-fw fas fa-cloud"></i><span> 在线工具</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://raw.githubusercontent.com/Center-cr/picture/main/MATLAB2019a.png')"><nav id="nav"><span id="blog-info"><a href="/" title="Center-cr's Blog"><span class="site-name">Center-cr's Blog</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于我</span></a></div><div class="menus_item"><a class="site-page" href="/tools_online/"><i class="fa-fw fas fa-cloud"></i><span> 在线工具</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">MATLAB乱码问题解决</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2025-01-05T16:00:00.000Z" title="发表于 2025-01-06 00:00:00">2025-01-06</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2025-01-05T16:00:00.000Z" title="更新于 2025-01-06 00:00:00">2025-01-06</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E5%B0%8F%E6%8A%80%E5%B7%A7/">小技巧</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">1.3k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>4分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="MATLAB乱码问题解决"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h2 id="问题描述">1 问题描述</h2>
+<p>MATLAB R2019a 打开他人 .m 文件在MATLAB编辑器中文全为乱码，在安装目录
+bin 文件夹下更改 lccdata.xml
+后无乱码，但是输出绘图和命令行仍是乱码。</p>
+<figure>
+<img
+src="https://raw.githubusercontent.com/Center-cr/picture/main/image-20250106092211055.png"
+alt="image-20250106092211055" />
+<figcaption aria-hidden="true">image-20250106092211055</figcaption>
+</figure>
+<h2 id="解决方案">2 解决方案</h2>
+<h3 id="针对在-matlab-编辑器打开出现乱码分析">2.1 针对在 MATLAB
+编辑器打开出现乱码分析</h3>
+<p>推测为编码方式出现问题，实际上也是编码方式的问题</p>
 <p>1、查看现在编码方式</p>
 <p>在命令行输入：</p>
 <figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">feature(<span class="string">&#x27;locale&#x27;</span>)</span><br></pre></td></tr></table></figure>
-
 <p>查看输出为：</p>
-<p><img src="https://raw.githubusercontent.com/Center-cr/picture/main/image-20250106092323944.png" alt="image-20250106092323944"></p>
+<figure>
+<img
+src="https://raw.githubusercontent.com/Center-cr/picture/main/image-20250106092323944.png"
+alt="image-20250106092323944" />
+<figcaption aria-hidden="true">image-20250106092323944</figcaption>
+</figure>
 <p>或者输入：</p>
 <figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">slCharacterEncoding()</span><br></pre></td></tr></table></figure>
-
 <p>输出为：</p>
-<p><img src="https://raw.githubusercontent.com/Center-cr/picture/main/image-20250106092439896.png" alt="image-20250106092439896"></p>
-<p>可以看到编码方式为 GBK </p>
+<figure>
+<img
+src="https://raw.githubusercontent.com/Center-cr/picture/main/image-20250106092439896.png"
+alt="image-20250106092439896" />
+<figcaption aria-hidden="true">image-20250106092439896</figcaption>
+</figure>
+<p>可以看到编码方式为 GBK</p>
 <p>2、第三方编辑器打开</p>
-<p>而在第三方编辑器中打开.m文件不会出现乱码且编码方式为 ‘UTF-8’</p>
-<p><img src="https://raw.githubusercontent.com/Center-cr/picture/main/image-20250106092738918.png" alt="image-20250106092738918"></p>
-<p>3、（无效）尝试修改编码方式从 ‘GBK’ 到 ‘UTF-8’，在命令行输入</p>
+<p>而在第三方编辑器中打开.m文件不会出现乱码且编码方式为 ‘UTF-8'</p>
+<figure>
+<img
+src="https://raw.githubusercontent.com/Center-cr/picture/main/image-20250106092738918.png"
+alt="image-20250106092738918" />
+<figcaption aria-hidden="true">image-20250106092738918</figcaption>
+</figure>
+<p>3、（无效）尝试修改编码方式从 'GBK' 到 'UTF-8'，在命令行输入</p>
 <figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">slCharacterEncoding(<span class="string">&#x27;UTF-8&#x27;</span>)</span><br></pre></td></tr></table></figure>
-
 <p>输入：</p>
 <figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">slCharacterEncoding()</span><br></pre></td></tr></table></figure>
-
 <p>输出为：</p>
-<p><img src="https://raw.githubusercontent.com/Center-cr/picture/main/image-20250106093203886.png" alt="image-20250106093203886"></p>
+<figure>
+<img
+src="https://raw.githubusercontent.com/Center-cr/picture/main/image-20250106093203886.png"
+alt="image-20250106093203886" />
+<figcaption aria-hidden="true">image-20250106093203886</figcaption>
+</figure>
 <p>但是乱码未解决</p>
 <p>4、（无效）重启MALAB后仍然乱码</p>
-<p><img src="https://raw.githubusercontent.com/Center-cr/picture/main/image-20250106093623181.png" alt="image-20250106093623181"></p>
-<p>且输入 slCharacterEncoding() 后仍然显示为 ‘GBK’</p>
-<h3 id="2-2-针对在-MATLAB-编辑器打开出现乱码解决"><a href="#2-2-针对在-MATLAB-编辑器打开出现乱码解决" class="headerlink" title="2.2 针对在 MATLAB 编辑器打开出现乱码解决"></a>2.2 针对在 MATLAB 编辑器打开出现乱码解决</h3><p>通过修改安装目录 bin 文件夹下的 lcdata.xml ，达到让 MATLAB 编辑器将 ‘GBK’ 重定向为 ‘UTF-8’ 的效果</p>
+<figure>
+<img
+src="https://raw.githubusercontent.com/Center-cr/picture/main/image-20250106093623181.png"
+alt="image-20250106093623181" />
+<figcaption aria-hidden="true">image-20250106093623181</figcaption>
+</figure>
+<p>且输入 slCharacterEncoding() 后仍然显示为 'GBK'</p>
+<h3 id="针对在-matlab-编辑器打开出现乱码解决">2.2 针对在 MATLAB
+编辑器打开出现乱码解决</h3>
+<p>通过修改安装目录 bin 文件夹下的 lcdata.xml ，达到让 MATLAB 编辑器将
+'GBK' 重定向为 'UTF-8' 的效果</p>
 <p>1、打开安装目录 bin 文件夹，找到对应文件</p>
-<p>关注 ‘lcdata.xml’ 和 ‘lcdata_utf8.xml’ 两个文件</p>
-<p>将 ‘lcdata.xml’  、’lcdata_utf8.xml’ 分别重命名为 ‘lcdata_backup.xml’、’lcdata_utf8_backup.xml’ 进行备份，</p>
-<p>再复制一份原 ‘lcdata_utf8.xml’ ，将其重命名为 ‘lcdata.xml’ </p>
-<p>2、修改  ‘lcdata.xml’ </p>
-<p>打开 ‘lcdata.xml’ 找到 ‘GBK’ 和 ‘UTF-8’ 字段</p>
+<p>关注 'lcdata.xml' 和 'lcdata_utf8.xml' 两个文件</p>
+<p>将 'lcdata.xml' 、'lcdata_utf8.xml' 分别重命名为
+'lcdata_backup.xml'、'lcdata_utf8_backup.xml' 进行备份，</p>
+<p>再复制一份原 'lcdata_utf8.xml' ，将其重命名为 'lcdata.xml'</p>
+<p>2、修改 'lcdata.xml'</p>
+<p>打开 'lcdata.xml' 找到 'GBK' 和 'UTF-8' 字段</p>
 <p>（1）‘GBK’ 对应字段删除</p>
 <p>定位到‘GBK’ 对应字段，删去</p>
 <figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;encoding name=<span class="string">&quot;GBK&quot;</span>&gt;</span><br><span class="line">    &lt;encoding_alias name=<span class="string">&quot;936&quot;</span>/&gt;</span><br><span class="line">&lt;/encoding&gt;</span><br></pre></td></tr></table></figure>
-<p>（2）’UTF-8’ 对应字段修改</p>
-<p>定位到 ‘UTF-8’ 对应字段</p>
+<p>（2）'UTF-8' 对应字段修改</p>
+<p>定位到 'UTF-8' 对应字段</p>
 <figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;encoding name=<span class="string">&quot;UTF-8&quot;</span>&gt;</span><br><span class="line">    &lt;encoding_alias name=<span class="string">&quot;utf8&quot;</span>/&gt;</span><br><span class="line">&lt;/encoding&gt;</span><br></pre></td></tr></table></figure>
-
 <p>修改为：</p>
 <figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;encoding name=<span class="string">&quot;UTF-8&quot;</span>&gt;</span><br><span class="line">    &lt;encoding_alias name=<span class="string">&quot;utf8&quot;</span>/&gt;</span><br><span class="line">    &lt;encoding_alias name=<span class="string">&quot;GBK&quot;</span>/&gt; </span><br><span class="line">&lt;/encoding&gt;</span><br></pre></td></tr></table></figure>
-
-<p>通过这样的修改，可以使 MATLAB 编辑器将 ‘GBK’ 重定向为 ‘UTF-8’</p>
+<p>通过这样的修改，可以使 MATLAB 编辑器将 'GBK' 重定向为 'UTF-8'</p>
 <p>3、重新打开 MATLAB 编辑器验证</p>
 <p>观察到中文显示正常</p>
-<p><img src="https://raw.githubusercontent.com/Center-cr/picture/main/image-20250106095427859.png" alt="image-20250106095427859"></p>
-<h3 id="2-3-针对命令行输出和绘图乱码问题分析"><a href="#2-3-针对命令行输出和绘图乱码问题分析" class="headerlink" title="2.3 针对命令行输出和绘图乱码问题分析"></a>2.3 针对命令行输出和绘图乱码问题分析</h3><p>编辑器解决乱码后命令行输出和绘图界面仍然乱码，修改字体也无效后，通过添加启动脚本设置编码方式解决</p>
-<p><img src="https://raw.githubusercontent.com/Center-cr/picture/main/image-20250106095542145.png" alt="image-20250106095542145"></p>
-<p><img src="https://raw.githubusercontent.com/Center-cr/picture/main/image-20250106095627761.png" alt="image-20250106095627761"></p>
-<p>观察到 feature(‘locale’) 的输出为：</p>
-<p><img src="https://raw.githubusercontent.com/Center-cr/picture/main/image-20250106092323944.png" alt="image-20250106092323944"></p>
-<p>可以看到终端仍为 ‘GBK’ 编码，尝试修改系统终端默认编码</p>
+<figure>
+<img
+src="https://raw.githubusercontent.com/Center-cr/picture/main/image-20250106095427859.png"
+alt="image-20250106095427859" />
+<figcaption aria-hidden="true">image-20250106095427859</figcaption>
+</figure>
+<h3 id="针对命令行输出和绘图乱码问题分析">2.3
+针对命令行输出和绘图乱码问题分析</h3>
+<p>编辑器解决乱码后命令行输出和绘图界面仍然乱码，修改字体也无效后，通过添加启动脚本设置编码方式解决</p>
+<figure>
+<img
+src="https://raw.githubusercontent.com/Center-cr/picture/main/image-20250106095542145.png"
+alt="image-20250106095542145" />
+<figcaption aria-hidden="true">image-20250106095542145</figcaption>
+</figure>
+<figure>
+<img
+src="https://raw.githubusercontent.com/Center-cr/picture/main/image-20250106095627761.png"
+alt="image-20250106095627761" />
+<figcaption aria-hidden="true">image-20250106095627761</figcaption>
+</figure>
+<p>观察到 feature('locale') 的输出为：</p>
+<figure>
+<img
+src="https://raw.githubusercontent.com/Center-cr/picture/main/image-20250106092323944.png"
+alt="image-20250106092323944" />
+<figcaption aria-hidden="true">image-20250106092323944</figcaption>
+</figure>
+<p>可以看到终端仍为 'GBK' 编码，尝试修改系统终端默认编码</p>
 <p>2、（无效）修改系统终端编码</p>
-<p>（1）cmd 打开终端，未修改前为 ‘GBK’,现在通过重设时区的方式修改为 ‘UTF-8’</p>
-<p><img src="https://raw.githubusercontent.com/Center-cr/picture/main/image-20250106101041345.png" alt="image-20250106101041345"></p>
+<p>（1）cmd 打开终端，未修改前为 'GBK',现在通过重设时区的方式修改为
+'UTF-8'</p>
+<figure>
+<img
+src="https://raw.githubusercontent.com/Center-cr/picture/main/image-20250106101041345.png"
+alt="image-20250106101041345" />
+<figcaption aria-hidden="true">image-20250106101041345</figcaption>
+</figure>
 <p>（2）打开‘控制面板’-&gt;‘区域’</p>
-<p><img src="https://raw.githubusercontent.com/Center-cr/picture/main/image-20250106101212227.png" alt="image-20250106101212227"></p>
+<figure>
+<img
+src="https://raw.githubusercontent.com/Center-cr/picture/main/image-20250106101212227.png"
+alt="image-20250106101212227" />
+<figcaption aria-hidden="true">image-20250106101212227</figcaption>
+</figure>
 <p>（3）打开‘管理’-&gt;‘更改系统区域设置’</p>
-<p>勾选 ‘Beta 版：使用Unicode UTF-8’，重启</p>
-<p><img src="https://raw.githubusercontent.com/Center-cr/picture/main/image-20250106101312657.png" alt="image-20250106101312657"></p>
+<p>勾选 'Beta 版：使用Unicode UTF-8'，重启</p>
+<figure>
+<img
+src="https://raw.githubusercontent.com/Center-cr/picture/main/image-20250106101312657.png"
+alt="image-20250106101312657" />
+<figcaption aria-hidden="true">image-20250106101312657</figcaption>
+</figure>
 <p>（4）打开 MATLAB 仍然乱码</p>
 <p>3、（无效）MATLAB更改支持中文的字体</p>
-<p>（1）打开 ‘主页’-&gt;‘预设’</p>
-<p><img src="https://raw.githubusercontent.com/Center-cr/picture/main/image-20250106101552140.png" alt="image-20250106101552140"></p>
-<p>（2）找到 ‘字体’ -&gt; ‘自定义’ -&gt;‘命令行窗口’-&gt;‘自定义’</p>
-<p>修改字体为支持中文的字体，如’宋体’</p>
-<p><img src="https://raw.githubusercontent.com/Center-cr/picture/main/image-20250106101802417.png" alt="image-20250106101802417"></p>
+<p>（1）打开 '主页'-&gt;‘预设’</p>
+<figure>
+<img
+src="https://raw.githubusercontent.com/Center-cr/picture/main/image-20250106101552140.png"
+alt="image-20250106101552140" />
+<figcaption aria-hidden="true">image-20250106101552140</figcaption>
+</figure>
+<p>（2）找到 '字体' -&gt; ‘自定义’ -&gt;‘命令行窗口’-&gt;‘自定义’</p>
+<p>修改字体为支持中文的字体，如'宋体'</p>
+<figure>
+<img
+src="https://raw.githubusercontent.com/Center-cr/picture/main/image-20250106101802417.png"
+alt="image-20250106101802417" />
+<figcaption aria-hidden="true">image-20250106101802417</figcaption>
+</figure>
 <p>（3）仍然无法解决乱码</p>
-<h3 id="2-4-针对命令行输出和绘图乱码问题解决"><a href="#2-4-针对命令行输出和绘图乱码问题解决" class="headerlink" title="2.4 针对命令行输出和绘图乱码问题解决"></a>2.4 针对命令行输出和绘图乱码问题解决</h3><p>通过启动时运行脚本 ‘startup.m’ 解决</p>
+<h3 id="针对命令行输出和绘图乱码问题解决">2.4
+针对命令行输出和绘图乱码问题解决</h3>
+<p>通过启动时运行脚本 'startup.m' 解决</p>
 <p>1、在MATLAB安装目录之外新建文件夹，如下：</p>
-<p>D:\SoftwareData\MATLABWorkPlace\Startup</p>
-<p>2、新建启动脚本’startup.m’</p>
-<p>启动脚本’startup.m’名字不要更改</p>
+<p>D:</p>
+<p>2、新建启动脚本'startup.m'</p>
+<p>启动脚本'startup.m'名字不要更改</p>
 <p>官网描述如下:</p>
-<p><code>startup</code> 在启动 MATLAB® 时执行用户指定的命令。MATLAB 执行搜索路径中名为 <code>startup</code> 且具有可执行文件扩展名的任何文件。可执行文件扩展名的示例有 <code>.m</code>、<code>.mlx</code> 和 <code>.mlapp</code>。</p>
-<p>在 <a target="_blank" rel="noopener" href="https://ww2.mathworks.cn/help/matlab/ref/userpath.html"><code>userpath</code></a> 文件夹中创建一个 <code>startup.m</code> 文件，该文件夹位于 MATLAB 搜索路径上。添加希望在启动时执行的命令。例如，您的代码可以包含物理常量、图形属性的默认值、工程换算因子或者您想要在工作区中预定义的任何其他内容</p>
-<p><img src="https://raw.githubusercontent.com/Center-cr/picture/main/image-20250106103052242.png" alt="image-20250106103052242"></p>
+<p><code>startup</code> 在启动 MATLAB® 时执行用户指定的命令。MATLAB
+执行搜索路径中名为 <code>startup</code>
+且具有可执行文件扩展名的任何文件。可执行文件扩展名的示例有
+<code>.m</code>、<code>.mlx</code> 和 <code>.mlapp</code>。</p>
+<p>在 <a
+target="_blank" rel="noopener" href="https://ww2.mathworks.cn/help/matlab/ref/userpath.html"><code>userpath</code></a>
+文件夹中创建一个 <code>startup.m</code> 文件，该文件夹位于 MATLAB
+搜索路径上。添加希望在启动时执行的命令。例如，您的代码可以包含物理常量、图形属性的默认值、工程换算因子或者您想要在工作区中预定义的任何其他内容</p>
+<figure>
+<img
+src="https://raw.githubusercontent.com/Center-cr/picture/main/image-20250106103052242.png"
+alt="image-20250106103052242" />
+<figcaption aria-hidden="true">image-20250106103052242</figcaption>
+</figure>
 <p>3、在启动脚本中编写</p>
 <figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">feature(<span class="string">&#x27;DefaultCharacterSet&#x27;</span>,<span class="string">&#x27;UTF-8&#x27;</span>);</span><br><span class="line">feature(<span class="string">&#x27;DefaultCharacterSet&#x27;</span>,<span class="string">&#x27;UTF-8&#x27;</span>);</span><br></pre></td></tr></table></figure>
-
-<p>不知什么原因feature(‘DefaultCharacterSet’,’UTF-8’);输入了两次才有效果</p>
+<p>不知什么原因feature('DefaultCharacterSet','UTF-8');输入了两次才有效果</p>
 <p>4、在 MATLAB中 添加启动脚本路径</p>
-<p>‘主页’ -&gt; ‘设置路径’</p>
-<p><img src="https://raw.githubusercontent.com/Center-cr/picture/main/image-20250106103155428.png" alt="image-20250106103155428"></p>
-<p>‘添加文件夹’ -&gt;D:\SoftwareData\MATLABWorkPlace\Startup(脚本路径)</p>
-<p><img src="https://raw.githubusercontent.com/Center-cr/picture/main/image-20250106103250304.png" alt="image-20250106103250304"></p>
-<h3 id="效果"><a href="#效果" class="headerlink" title="效果"></a>效果</h3><p>成功解决中文乱码问题</p>
-<p><img src="https://raw.githubusercontent.com/Center-cr/picture/main/image-20250106103356468.png" alt="image-20250106103356468"></p>
-<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/u010440456/article/details/120051753">如何在 Matlab 中启用 UTF-8 编码_matlab编码设置utf8-CSDN博客</a></p>
-<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/yu1581274988/article/details/127271923">Matlab: 修改编码方式, 如GBK-＞UTF-8_matlab编码设置utf8-CSDN博客</a></p>
-<p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/leoking01/p/8269516.html">matlab中文显示乱码：控制台上的，编辑器的，图片中的 - leoking01 - 博客园</a></p>
-<p><a target="_blank" rel="noopener" href="https://la.mathworks.com/matlabcentral/answers/1934944-how-can-i-change-matlab-terminal-encoding-from-gbk-to-utf8">How can I change matlab terminal Encoding from ‘GBK’to ‘utf8’? - MATLAB Answers - MATLAB Central</a></p>
-<p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/luckyang/p/18269484">修改windows终端cmd控制台默认编码为utf-8 - luckyangg - 博客园</a></p>
-<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/didi_ya/article/details/110309920">MATLAB遇到问题：绘图窗口显示中文乱码方框的解决方法_matlab新罗马中文是方块-CSDN博客</a></p>
-<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/Ma_ShiC/article/details/121080983">适合matlab的编程字体“YAHEI CONSOLAS HYBRID”-下载+安装-CSDN博客</a></p>
-<p><a target="_blank" rel="noopener" href="https://ww2.mathworks.cn/help/matlab/ref/startup.html">startup</a></p>
-</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="http://example.com">Center-cr</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="http://example.com/2025/01/06/%E5%B0%8F%E6%8A%80%E5%B7%A7/MATLAB/MATLAB%E4%B9%B1%E7%A0%81%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/">http://example.com/2025/01/06/%E5%B0%8F%E6%8A%80%E5%B7%A7/MATLAB/MATLAB%E4%B9%B1%E7%A0%81%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://example.com" target="_blank">Center-cr's Blog</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/MATLAB/">MATLAB</a></div><div class="post_share"><div class="social-share" data-image="https://raw.githubusercontent.com/Center-cr/picture/main/MATLAB2019a.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="/pluginsSrc/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="/pluginsSrc/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2025/01/08/%E5%B0%8F%E6%8A%80%E5%B7%A7/conda%E4%BD%BF%E7%94%A8/Anaconda%E4%BD%BF%E7%94%A8/" title="Anaconda使用"><img class="cover" src="https://raw.githubusercontent.com/Center-cr/picture/main/Conda.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">Anaconda使用</div></div></a></div><div class="next-post pull-right"><a href="/2024/12/25/%E5%B0%8F%E6%8A%80%E5%B7%A7/MATLAB/Vscode%E7%9B%B4%E6%8E%A5%E8%B0%83%E8%AF%95MATLAB%E7%9A%84%E6%96%B9%E6%A1%88/" title="VScode直接调试MATLAB的方案"><img class="cover" src="https://raw.githubusercontent.com/Center-cr/picture/main/202412252329205.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">VScode直接调试MATLAB的方案</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><div><a href="/2024/12/25/%E5%B0%8F%E6%8A%80%E5%B7%A7/MATLAB/Vscode%E7%9B%B4%E6%8E%A5%E8%B0%83%E8%AF%95MATLAB%E7%9A%84%E6%96%B9%E6%A1%88/" title="VScode直接调试MATLAB的方案"><img class="cover" src="https://raw.githubusercontent.com/Center-cr/picture/main/202412252329205.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2024-12-25</div><div class="title">VScode直接调试MATLAB的方案</div></div></a></div></div></div><hr class="custom-hr"/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div id="gitalk-container"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E9%97%AE%E9%A2%98%E6%8F%8F%E8%BF%B0"><span class="toc-text">1 问题描述</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88"><span class="toc-text">2 解决方案</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-%E9%92%88%E5%AF%B9%E5%9C%A8-MATLAB-%E7%BC%96%E8%BE%91%E5%99%A8%E6%89%93%E5%BC%80%E5%87%BA%E7%8E%B0%E4%B9%B1%E7%A0%81%E5%88%86%E6%9E%90"><span class="toc-text">2.1 针对在 MATLAB 编辑器打开出现乱码分析</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-%E9%92%88%E5%AF%B9%E5%9C%A8-MATLAB-%E7%BC%96%E8%BE%91%E5%99%A8%E6%89%93%E5%BC%80%E5%87%BA%E7%8E%B0%E4%B9%B1%E7%A0%81%E8%A7%A3%E5%86%B3"><span class="toc-text">2.2 针对在 MATLAB 编辑器打开出现乱码解决</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-3-%E9%92%88%E5%AF%B9%E5%91%BD%E4%BB%A4%E8%A1%8C%E8%BE%93%E5%87%BA%E5%92%8C%E7%BB%98%E5%9B%BE%E4%B9%B1%E7%A0%81%E9%97%AE%E9%A2%98%E5%88%86%E6%9E%90"><span class="toc-text">2.3 针对命令行输出和绘图乱码问题分析</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-4-%E9%92%88%E5%AF%B9%E5%91%BD%E4%BB%A4%E8%A1%8C%E8%BE%93%E5%87%BA%E5%92%8C%E7%BB%98%E5%9B%BE%E4%B9%B1%E7%A0%81%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3"><span class="toc-text">2.4 针对命令行输出和绘图乱码问题解决</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%88%E6%9E%9C"><span class="toc-text">效果</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%82%E8%80%83"><span class="toc-text">参考</span></a></li></ol></div></div></div></div></main><footer id="footer" style="background-image: url('https://raw.githubusercontent.com/Center-cr/picture/main/MATLAB2019a.png')"><div id="footer-wrap"></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/pluginsSrc/@fancyapps/ui/dist/fancybox/fancybox.umd.js"></script><script src="/pluginsSrc/instant.page/instantpage.js" type="module"></script><div class="js-pjax"><script>function loadGitalk () {
+<p>'主页' -&gt; '设置路径'</p>
+<figure>
+<img
+src="https://raw.githubusercontent.com/Center-cr/picture/main/image-20250106103155428.png"
+alt="image-20250106103155428" />
+<figcaption aria-hidden="true">image-20250106103155428</figcaption>
+</figure>
+<p>‘添加文件夹’ -&gt;D:(脚本路径)</p>
+<figure>
+<img
+src="https://raw.githubusercontent.com/Center-cr/picture/main/image-20250106103250304.png"
+alt="image-20250106103250304" />
+<figcaption aria-hidden="true">image-20250106103250304</figcaption>
+</figure>
+<h3 id="效果">效果</h3>
+<p>成功解决中文乱码问题</p>
+<figure>
+<img
+src="https://raw.githubusercontent.com/Center-cr/picture/main/image-20250106103356468.png"
+alt="image-20250106103356468" />
+<figcaption aria-hidden="true">image-20250106103356468</figcaption>
+</figure>
+<h2 id="参考">参考</h2>
+<p><a
+target="_blank" rel="noopener" href="https://blog.csdn.net/u010440456/article/details/120051753">如何在
+Matlab 中启用 UTF-8 编码_matlab编码设置utf8-CSDN博客</a></p>
+<p><a
+target="_blank" rel="noopener" href="https://blog.csdn.net/yu1581274988/article/details/127271923">Matlab:
+修改编码方式, 如GBK-＞UTF-8_matlab编码设置utf8-CSDN博客</a></p>
+<p><a
+target="_blank" rel="noopener" href="https://www.cnblogs.com/leoking01/p/8269516.html">matlab中文显示乱码：控制台上的，编辑器的，图片中的
+- leoking01 - 博客园</a></p>
+<p><a
+target="_blank" rel="noopener" href="https://la.mathworks.com/matlabcentral/answers/1934944-how-can-i-change-matlab-terminal-encoding-from-gbk-to-utf8">How
+can I change matlab terminal Encoding from 'GBK'to 'utf8'? - MATLAB
+Answers - MATLAB Central</a></p>
+<p><a
+target="_blank" rel="noopener" href="https://www.cnblogs.com/luckyang/p/18269484">修改windows终端cmd控制台默认编码为utf-8
+- luckyangg - 博客园</a></p>
+<p><a
+target="_blank" rel="noopener" href="https://blog.csdn.net/didi_ya/article/details/110309920">MATLAB遇到问题：绘图窗口显示中文乱码方框的解决方法_matlab新罗马中文是方块-CSDN博客</a></p>
+<p><a
+target="_blank" rel="noopener" href="https://blog.csdn.net/Ma_ShiC/article/details/121080983">适合matlab的编程字体“YAHEI
+CONSOLAS HYBRID”-下载+安装-CSDN博客</a></p>
+<p><a
+target="_blank" rel="noopener" href="https://ww2.mathworks.cn/help/matlab/ref/startup.html">startup</a></p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="http://example.com">Center-cr</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="http://example.com/2025/01/06/%E5%B0%8F%E6%8A%80%E5%B7%A7/MATLAB/MATLAB%E4%B9%B1%E7%A0%81%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/">http://example.com/2025/01/06/%E5%B0%8F%E6%8A%80%E5%B7%A7/MATLAB/MATLAB%E4%B9%B1%E7%A0%81%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://example.com" target="_blank">Center-cr's Blog</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/MATLAB/">MATLAB</a></div><div class="post_share"><div class="social-share" data-image="https://raw.githubusercontent.com/Center-cr/picture/main/MATLAB2019a.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="/pluginsSrc/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="/pluginsSrc/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2025/01/08/%E5%B0%8F%E6%8A%80%E5%B7%A7/%E8%A3%85%E6%9C%BA/E5+X99%E8%A3%85%E6%9C%BA/" title="E5+X99装机"><img class="cover" src="https://raw.githubusercontent.com/Center-cr/picture/main/x99.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">E5+X99装机</div></div></a></div><div class="next-post pull-right"><a href="/2024/12/25/%E5%B0%8F%E6%8A%80%E5%B7%A7/MATLAB/Vscode%E7%9B%B4%E6%8E%A5%E8%B0%83%E8%AF%95MATLAB%E7%9A%84%E6%96%B9%E6%A1%88/" title="VScode直接调试MATLAB的方案"><img class="cover" src="https://raw.githubusercontent.com/Center-cr/picture/main/202412252329205.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">VScode直接调试MATLAB的方案</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><div><a href="/2024/12/25/%E5%B0%8F%E6%8A%80%E5%B7%A7/MATLAB/Vscode%E7%9B%B4%E6%8E%A5%E8%B0%83%E8%AF%95MATLAB%E7%9A%84%E6%96%B9%E6%A1%88/" title="VScode直接调试MATLAB的方案"><img class="cover" src="https://raw.githubusercontent.com/Center-cr/picture/main/202412252329205.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2024-12-25</div><div class="title">VScode直接调试MATLAB的方案</div></div></a></div></div></div><hr class="custom-hr"/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div id="gitalk-container"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%97%AE%E9%A2%98%E6%8F%8F%E8%BF%B0"><span class="toc-text">1 问题描述</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88"><span class="toc-text">2 解决方案</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%92%88%E5%AF%B9%E5%9C%A8-matlab-%E7%BC%96%E8%BE%91%E5%99%A8%E6%89%93%E5%BC%80%E5%87%BA%E7%8E%B0%E4%B9%B1%E7%A0%81%E5%88%86%E6%9E%90"><span class="toc-text">2.1 针对在 MATLAB
+编辑器打开出现乱码分析</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%92%88%E5%AF%B9%E5%9C%A8-matlab-%E7%BC%96%E8%BE%91%E5%99%A8%E6%89%93%E5%BC%80%E5%87%BA%E7%8E%B0%E4%B9%B1%E7%A0%81%E8%A7%A3%E5%86%B3"><span class="toc-text">2.2 针对在 MATLAB
+编辑器打开出现乱码解决</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%92%88%E5%AF%B9%E5%91%BD%E4%BB%A4%E8%A1%8C%E8%BE%93%E5%87%BA%E5%92%8C%E7%BB%98%E5%9B%BE%E4%B9%B1%E7%A0%81%E9%97%AE%E9%A2%98%E5%88%86%E6%9E%90"><span class="toc-text">2.3
+针对命令行输出和绘图乱码问题分析</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%92%88%E5%AF%B9%E5%91%BD%E4%BB%A4%E8%A1%8C%E8%BE%93%E5%87%BA%E5%92%8C%E7%BB%98%E5%9B%BE%E4%B9%B1%E7%A0%81%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3"><span class="toc-text">2.4
+针对命令行输出和绘图乱码问题解决</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%88%E6%9E%9C"><span class="toc-text">效果</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%82%E8%80%83"><span class="toc-text">参考</span></a></li></ol></div></div></div></div></main><footer id="footer" style="background-image: url('https://raw.githubusercontent.com/Center-cr/picture/main/MATLAB2019a.png')"><div id="footer-wrap"></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/pluginsSrc/@fancyapps/ui/dist/fancybox/fancybox.umd.js"></script><script src="/pluginsSrc/instant.page/instantpage.js" type="module"></script><div class="js-pjax"><script>function loadGitalk () {
   function initGitalk () {
     var gitalk = new Gitalk(Object.assign({
       clientID: '0b46f2c6ec014d6d94b7',
